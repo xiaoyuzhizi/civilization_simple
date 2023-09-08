@@ -1,0 +1,7 @@
+﻿  main.cpp
+D:\大作业\20.1.1\20.1.1\Display.h(65,1): warning C4305: “=”: 从“double”到“float”截断
+D:\大作业\20.1.1\20.1.1\Display.h(68,1): warning C4305: “=”: 从“double”到“float”截断
+D:\大作业\20.1.1\20.1.1\Display.h(69,1): warning C4305: “=”: 从“double”到“float”截断
+D:\大作业\20.1.1\20.1.1\main.cpp(60,36): warning C4305: “=”: 从“double”到“float”截断
+D:\大作业\20.1.1\20.1.1\main.cpp(61,37): warning C4305: “=”: 从“double”到“float”截断
+  Project19.vcxproj -> D:\code\Project19\x64\Debug\Project19.exe
