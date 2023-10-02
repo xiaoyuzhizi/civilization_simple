@@ -17,39 +17,39 @@ struct buone
 class Controller
 {
 public:
-	bool flagv;//true´ú±íÓ®ÁË
-	int round;  //µ±Ç°µÚ¼¸»ØºÏ
+	bool flagv;//trueÂ¥Ë™Â±ÃŒâ€Ã†Â¡Ã€
+	int round;
 	Cell** map = NULL;
 	float food;
-	float perfood;//Ã¿¾Ö¼ÓµÄfood
-	int centrepop;//ÊĞÖĞĞÄµÄÈË¿ÚÊı
-	float allpop;//×ÜÈË¿Ú
-	float alltech;//×Ü¿Æ¼¼Öµ
-	float allcul;//×ÜÎÄ»¯Öµ
-	float previouscul;//ÉÏÒ»´ÎÀ©ÕÅÍÁµØÊ±µÄÎÄ»¯Öµ
-	float score;//·ÖÊı
-	float pertech;//Ã¿¸öÈËÄÜÌá¹©µÄ¿Æ¼¼Öµ
-	float percul;//Í¬
-	float perprod;//Í¬
-	bool flagp;//Õâ»ØºÏÓÃ¹ıÉú²úÁ¦ÁË¾Ítrue£º»î¶¯/½¨ÖşÓÃµÄ
-	bool flagd;//true±íÊ¾´Ë»ØºÏÒÑ¾­Í¶Èë¹ıÒ»´ÎÉú²úÁ¦
-	float prod;//µ±Ç°Éú²úÁ¦**************************************************************************************************************************
-	char current_distribution;//µ±Ç°Éú²úÁ¦·ÖÅä¸øµÄÏîÄ¿
-	int currenti = 0;    //ÉÏÒ»»ØºÏÕıÔÚ½¨ÔìµÄ½¨Öş±àºÅ
-	int bo[20][20];//¼ÇÂ¼Ò»¸öµ¥Ôª¸ñÉÏÓĞÃ»ÓĞ½¨Öş£¨ÕıÔÚ½¨µÄ½¨ÖşÒ²ÊÇ½¨Öş£©
-	buone zao[101];//Ã¿Ò»Ìõ½¨Ôì¼ÇÂ¼£¬Ò»Ìõ¼ÇÂ¼ÖĞ°üº¬£º1¡¢ÔÚÄÄÀï½¨Ê²Ã´ 2¡¢Õâ´Î½¨Ôì»¹Ğè¼¸µãÉú²úÁ¦£¬¼´oktime
-	int idx;  //ÏÂÒ»´Î½¨Ôì½¨ÖşÔÚzaoÊı×éÖĞµÄÏÂ±ê
-	const float meeting = 50.0, show = 50.0, logistics = 50.0;  //¸÷¸ö»î¶¯µÄÉú²úÁ¦»ù´¡Öµ
-	int lastmeeting[100] = { 0 }, lastshow[100] = { 0 }, lastlogistics[100] = { 0 };//lasttimeÎª»î¶¯¼Ó³É³ÖĞøÊ±¼ä£¬
-	float endmeeting, endshow, endlogistics;//endtimeÎªµ±Ç°»î¶¯ËùĞèÉú²úÁ¦
-	double x;//xµÄÖµÔöµ½1£¬ÔòÈË¿Ú¼ÓÒ»¡£xµÄÖµ¼õµ½-1£¬ÔòÈË¿Ú¼õÒ»¡£
-	double foodbonus=0;//Ê³Îï¼Ó³É
-	double prodbonus;//Éú²úÁ¦¼Ó³É
+	float perfood;//âˆšÃ¸Ã¦Ã·Âºâ€ÂµÆ’food
+	int centrepop;//Â â€“Ã·â€“â€“Æ’ÂµÆ’Â»Ã€Ã¸â„Â Ë
+	float allpop;//â—Šâ€¹Â»Ã€Ã¸â„
+	float alltech;//â—Šâ€¹Ã¸âˆ†ÂºÂºÃ·Âµ
+	float allcul;//â—Šâ€¹Å’Æ’ÂªÃ˜Ã·Âµ
+	float previouscul;//â€¦Å“â€œÂªÂ¥Å’Â¿Â©â€™â‰ˆÃ•Â¡ÂµÃ¿Â Â±ÂµÆ’Å’Æ’ÂªÃ˜Ã·Âµ
+	float score;//âˆ‘Ã·Â Ë
+	float pertech;//âˆšÃ¸âˆË†Â»Ã€Æ’â€¹ÃƒÂ·Ï€Â©ÂµÆ’Ã¸âˆ†ÂºÂºÃ·Âµ
+	float percul;//Ã•Â¨
+	float perprod;//Ã•Â¨
+	bool flagp;//â€™â€šÂªÃ¿âˆ«Å“â€âˆšÏ€Ëâ€¦Ë™â‰¤Ë™Â¡Â¶Â¡Ã€Ã¦Ã•trueÂ£âˆ«ÂªÃ“âˆ‚Ã˜/Î©Â®Ã·Ë›â€âˆšÂµÆ’
+	bool flagd;//trueÂ±ÃŒÂ Ã¦ÂµÂ±Â«âˆÂªÃ¿âˆ«Å“âˆ‘Ã·â‰ˆâ€°Ï€Ëâ€¦Ë™â‰¤Ë™Â¡Â¶
+	float prod;//ÂµÂ±Â«âˆâ€¦Ë™â‰¤Ë™Â¡Â¶**************************************************************************************************************************
+	char current_distribution;//ÂµÂ±Â«âˆâ€¦Ë™â‰¤Ë™Â¡Â¶âˆ‘Ã·â‰ˆâ€°âˆÂ¯ÂµÆ’Å“Ã“Æ’Ã¸
+	int currenti = 0;
+	int bo[20][20];//ÂºÂ«Â¬Âºâ€œÂªâˆË†Âµâ€¢â€˜â„¢âˆÃ’â€¦Å“â€â€“âˆšÂªâ€â€“Î©Â®Ã·Ë›Â£Â®â€™Ëâ€˜â„Î©Â®ÂµÆ’Î©Â®Ã·Ë›â€œâ‰¤Â Â«Î©Â®Ã·Ë›Â£Â©
+	buone zao[101];//âˆšÃ¸â€œÂªÃƒÄ±Î©Â®â€˜ÃÂºÂ«Â¬ÂºÂ£Â¨â€œÂªÃƒÄ±ÂºÂ«Â¬ÂºÃ·â€“âˆÂ¸âˆ«Â¨Â£âˆ«1Â°Â¢â€˜â„Æ’Æ’Â¿Ã”Î©Â®Â â‰¤âˆšÂ¥ 2Â°Â¢â€™â€šÂ¥Å’Î©Â®â€˜ÃÂªÏ€â€“Ã‹ÂºâˆÂµâ€â€¦Ë™â‰¤Ë™Â¡Â¶Â£Â¨ÂºÂ¥oktime
+	int idx;
+	const float meeting = 50.0, show = 50.0, logistics = 50.0;
+	int lastmeeting[100] = { 0 }, lastshow[100] = { 0 }, lastlogistics[100] = { 0 };//lasttimeÅ’â„¢ÂªÃ“âˆ‚Ã˜Âºâ€â‰¥â€¦â‰¥Ã·â€“Â¯Â Â±Âºâ€°
+	float endmeeting, endshow, endlogistics;//endtimeÅ’â„¢ÂµÂ±Â«âˆÂªÃ“âˆ‚Ã˜Ã€Ë˜â€“Ã‹â€¦Ë™â‰¤Ë™Â¡Â¶
+	double x;//xÂµÆ’Ã·Âµâ€˜Ë†ÂµÎ©1Â£Â¨â€˜ÃšÂ»Ã€Ã¸â„Âºâ€â€œÂªÂ°Â£xÂµÆ’Ã·ÂµÂºÄ±ÂµÎ©-1Â£Â¨â€˜ÃšÂ»Ã€Ã¸â„ÂºÄ±â€œÂªÂ°Â£
+	double foodbonus=0;//Â â‰¥Å’Ã”Âºâ€â‰¥â€¦
+	double prodbonus;//â€¦Ë™â‰¤Ë™Â¡Â¶Âºâ€â‰¥â€¦
 
 	int length=0;
 	int width=0;
-	int m_centre; int n_centre;// ¼ÇÂ¼ÊĞÖĞĞÄµÄÎ»ÖÃ
-	int mark_remove = 0;//¼ÇÂ¼ÈË¿ÚÊÇ·ñ¼õÉÙ£¬ÒÀ´ÎÅĞ¶ÏÊÇ·ñµ÷ÓÃremovepop
+	int m_centre; int n_centre;// ÂºÂ«Â¬ÂºÂ â€“Ã·â€“â€“Æ’ÂµÆ’Å’ÂªÃ·âˆš
+	int mark_remove = 0;//ÂºÂ«Â¬ÂºÂ»Ã€Ã¸â„Â Â«âˆ‘Ã’ÂºÄ±â€¦Å¸Â£Â¨â€œÂ¿Â¥Å’â‰ˆâ€“âˆ‚Å“Â Â«âˆ‘Ã’ÂµËœâ€âˆšremovepop
 
 	Controller()
 	{
@@ -57,7 +57,7 @@ public:
 		x = 0;
 		food = 0;
 		perfood = 0.5;
-		centrepop = 2;//ÊĞÖĞĞÄµÄÈË¿ÚÊı
+		centrepop = 2;//Â â€“Ã·â€“â€“Æ’ÂµÆ’Â»Ã€Ã¸â„Â Ë
 		round = 0;
 		allpop = 2;
 		alltech = 0;
@@ -74,9 +74,6 @@ public:
 		endmeeting = 0;
 		endshow = 0;
 		endlogistics = 0;
-		remainmeeting = 0;
-		remainshow = 0;
-		remainlogistics = 0;
 		for (int i = 0; i < 20; i++)
 		{
 			for (int j = 0; j < 20; j++)
@@ -99,37 +96,37 @@ public:
 	void tongji();
 	void selectcenter();
 	void distribute();
-	//Ñ¡Ôñ¾Ù°ì»î¶¯
+	//â€”Â°â€˜Ã’Ã¦Å¸âˆÃÂªÃ“âˆ‚Ã˜
 	void activity();
 	void updatepop();
-	// Í³¼ÆÊÇ·ñÓĞ¿ªÊ¼»ò½áÊøµÄ»î¶¯
+	// Ã•â‰¥Âºâˆ†Â Â«âˆ‘Ã’â€â€“Ã¸â„¢Â ÂºÂªÃšÎ©Â·Â Â¯ÂµÆ’ÂªÃ“âˆ‚Ã˜
 	void tongji2();
 
-	// ¼ì²éÄÜ·ñ²Î¼Ó»î¶¯
+	// ÂºÃâ‰¤ÃˆÆ’â€¹âˆ‘Ã’â‰¤Å’Âºâ€ÂªÃ“âˆ‚Ã˜
 	bool check(char name, int endtime);
 
-	/*ÓÃÓÚmainº¯ÊıµÄ×Üwhile½áÊøºó£¬½øĞĞÃ¿»ØºÏÍ³¼Æ,
-	½ÓÊÕÒ»¸öµ±Ç°»î¶¯»ò½¨ÖşµÄ±äÁ¿£¬Èç¹û±¾»ØºÏ²»´«Èë£¬Ä¬ÈÏÎªÉÏ»ØºÏµÄ²ÎÊı£¬·ñÔò¸ÄÎª±¾»ØºÏµÄ£¬
-	²¢ÇÒ¼ÆËãÊ±ÓÃÏàÓ¦µÄ¹¤ÆÚ¼õÈ¥µ±Ç°ÕæÊµÉú²úÁ¦ÏûºÄ*/
+	/*â€âˆšâ€â„mainâˆ«Ã˜Â ËÂµÆ’â—Šâ€¹whileÎ©Â·Â Â¯âˆ«Ã›Â£Â¨Î©Â¯â€“â€“âˆšÃ¸ÂªÃ¿âˆ«Å“Ã•â‰¥Âºâˆ†,
+	Î©â€Â â€™â€œÂªâˆË†ÂµÂ±Â«âˆÂªÃ“âˆ‚Ã˜ÂªÃšÎ©Â®Ã·Ë›ÂµÆ’Â±â€°Â¡Ã¸Â£Â¨Â»ÃÏ€ËšÂ±Ã¦ÂªÃ¿âˆ«Å“â‰¤ÂªÂ¥Â´Â»ÃÂ£Â¨Æ’Â¨Â»Å“Å’â„¢â€¦Å“ÂªÃ¿âˆ«Å“ÂµÆ’â‰¤Å’Â ËÂ£Â¨âˆ‘Ã’â€˜ÃšâˆÆ’Å’â„¢Â±Ã¦ÂªÃ¿âˆ«Å“ÂµÆ’Â£Â¨
+	â‰¤Â¢Â«â€œÂºâˆ†Ã€â€Â Â±â€âˆšÅ“â€¡â€Â¶ÂµÆ’Ï€Â§âˆ†â„ÂºÄ±Â»â€¢ÂµÂ±Â«âˆâ€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å“Ëšâˆ«Æ’*/
 	void default_statistics(char current_distribution);
 
-	void setpopBonus();//Í³¼ÆÍÁµØ¼Ó³É
+	void setpopBonus();//Ã•â‰¥Âºâˆ†Ã•Â¡ÂµÃ¿Âºâ€â‰¥â€¦
 
-	//Í³¼Æ¿Æ¼¼¡¢ÎÄ»¯¡¢Éú²úÁ¦
+	//Ã•â‰¥Âºâˆ†Ã¸âˆ†ÂºÂºÂ°Â¢Å’Æ’ÂªÃ˜Â°Â¢â€¦Ë™â‰¤Ë™Â¡Â¶
 	void tongji3();
 
-	//À©ÕÅÍÁµØ
+	//Â¿Â©â€™â‰ˆÃ•Â¡ÂµÃ¿
 	void expansion();
 
 	void victory();
-	void removepop();//ÓÃÓÚÔÚ×ÜÈË¿Ú¼õÉÙÊ±Ñ¡ÔñÄ³¿éµØ¶ù½«ÈË¼õÉÙ
+	void removepop();//â€âˆšâ€â„â€˜â„â—Šâ€¹Â»Ã€Ã¸â„ÂºÄ±â€¦Å¸Â Â±â€”Â°â€˜Ã’Æ’â‰¥Ã¸ÃˆÂµÃ¿âˆ‚Ë˜Î©Â´Â»Ã€ÂºÄ±â€¦Å¸
 	bool removepop_judge(int& m, int& n);
 	bool removepop_input(int& m, int& n);
 
 
 };
-bool select_poptrsf(Controller& controller);//ÊµÏÖÊäÈëÍÁµØ×ø±êºó½á¹û³É¹¦Óë·ñµÄÅĞ¶Ï
-bool judge_coord_1(Controller& controller, int& m, int& n);//ÅĞ¶Ï1.ÖĞ¸÷ÖÖÇé¿ö
+bool select_poptrsf(Controller& controller);//Â ÂµÅ“Ã·Â â€°Â»ÃÃ•Â¡ÂµÃ¿â—ŠÂ¯Â±Ãâˆ«Ã›Î©Â·Ï€Ëšâ‰¥â€¦Ï€Â¶â€Ãâˆ‘Ã’ÂµÆ’â‰ˆâ€“âˆ‚Å“
+bool judge_coord_1(Controller& controller, int& m, int& n);//â‰ˆâ€“âˆ‚Å“1.Ã·â€“âˆËœÃ·Ã·Â«ÃˆÃ¸Ë†
 bool judge_coord_2(Controller& controller, int& m1, int& n1);
 bool coord_1(Controller& controllerint ,int&m,int &n);
 bool coord_2(Controller& controllerint,int &m1,int &n1);
