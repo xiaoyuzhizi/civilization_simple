@@ -4,17 +4,17 @@
 void Controller::selectcenter()
 {
 	int m, n;
-	cout << "ÇëÑ¡ÔñÊĞÖĞĞÄµÄ×ø±ê£º(Á½Êı×Ö¼äÒÔ¿Õ¸ñ·Ö¸ô)" << endl;
+	cout << "Â«Ãâ€”Â°â€˜Ã’Â â€“Ã·â€“â€“Æ’ÂµÆ’â—ŠÂ¯Â±ÃÂ£âˆ«(Â¡Î©Â Ëâ—ŠÃ·Âºâ€°â€œâ€˜Ã¸â€™âˆÃ’âˆ‘Ã·âˆÃ™)" << endl;
 
 	cin >> m;
 
 	cin >> n;
 	while (this->map[m][n].landform == OCEAN || this->map[m][n].landform == SEA || this->map[m][n].landform == MOUNTAIN)
 	{
-		cout << "ÊĞÖĞĞÄ²»¿É½¨ÔÚÉ½Âö£¬½üº££¬Éîº££¬ÇëÖØĞÂÑ¡Ôñ£º" << endl;
-		cout << "ÇëÊäÈëºá×ø±ê£º" << endl;
+		cout << "Â â€“Ã·â€“â€“Æ’â‰¤ÂªÃ¸â€¦Î©Â®â€˜â„â€¦Î©Â¬Ë†Â£Â¨Î©Â¸âˆ«Â£Â£Â¨â€¦Ã“âˆ«Â£Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’Â£âˆ«" << endl;
+		cout << "Â«ÃÂ â€°Â»Ãâˆ«Â·â—ŠÂ¯Â±ÃÂ£âˆ«" << endl;
 		cin >> m;
-		cout << "ÇëÊäÈë×İ×ø±ê£º" << endl;
+		cout << "Â«ÃÂ â€°Â»Ãâ—Šâ€ºâ—ŠÂ¯Â±ÃÂ£âˆ«" << endl;
 		cin >> n;
 	}
 	
@@ -26,7 +26,7 @@ void Controller::selectcenter()
 	map[m][n + 1].ifpop = OWNED;
 	map[m][n - 1].ifpop = OWNED;
 	this->m_centre = m; this->n_centre = n;
-	cout << "ÊĞÖĞĞÄÑ¡ÔñÍê³É£º" << endl;
+	cout << "Â â€“Ã·â€“â€“Æ’â€”Â°â€˜Ã’Ã•Ãâ‰¥â€¦Â£âˆ«" << endl;
 	system("pause");
 	system("cls");
 }
@@ -35,10 +35,10 @@ void Controller::build()
 {
 	int n, x, y;
 
-	//if (zao[2].type == 0) cout << "Ã»µ½Õâ";
+	//if (zao[2].type == 0) cout << "âˆšÂªÂµÎ©â€™â€š";
 	
-	cout << "ÇëÊäÈë¶ÔÓ¦Êı×ÖÒÔÑ¡ÔñÄãÏë½¨ÔìµÄ½¨ÖşÖÖÀà" << endl << "1:Ñ§Ôº" << endl << "2:¾çÔº¹ã³¡" << endl << "3:Ææ¹Û" << endl << "4:¹¤ÒµÇø" << endl << "5:²é¿´°ïÖú" << endl;
-	cout << "6:·µ»ØÉÏÒ»¼¶²Ëµ¥" << endl;
+	cout << "Â«ÃÂ â€°Â»Ãâˆ‚â€˜â€Â¶Â Ëâ—ŠÃ·â€œâ€˜â€”Â°â€˜Ã’Æ’â€Å“ÃÎ©Â®â€˜ÃÂµÆ’Î©Â®Ã·Ë›Ã·Ã·Â¿â€¡" << endl << "1:â€”ÃŸâ€˜âˆ«" << endl << "2:Ã¦Ãâ€˜âˆ«Ï€â€â‰¥Â°" << endl << "3:âˆ†ÃŠÏ€â‚¬" << endl << "4:Ï€Â§â€œÂµÂ«Â¯" << endl << "5:â‰¤ÃˆÃ¸Â¥âˆÃ”Ã·Ë™" << endl;
+	cout << "6:âˆ‘ÂµÂªÃ¿â€¦Å“â€œÂªÂºâˆ‚â‰¤Ã€Âµâ€¢" << endl;
 
 	do {
 		cin >> n;
@@ -49,7 +49,7 @@ void Controller::build()
 		switch (n)
 		{
 		case 1:
-			//	cout << "ĞèÒª" << 100 / prod << "¸ö»ØºÏÍê¹¤"<<endl;
+			//	cout << "â€“Ã‹â€œâ„¢" << 100 / prod << "âˆË†ÂªÃ¿âˆ«Å“Ã•ÃÏ€Â§"<<endl;
 			zao[idx].oktime = round;
 			zao[idx].type = n;
 			
@@ -58,31 +58,31 @@ void Controller::build()
 
 			break;
 		case 2:
-			//	cout << "ĞèÒª" << 100 / prod << "¸ö»ØºÏÍê¹¤" << endl;
+			//	cout << "â€“Ã‹â€œâ„¢" << 100 / prod << "âˆË†ÂªÃ¿âˆ«Å“Ã•ÃÏ€Â§" << endl;
 
 			zao[idx].oktime = round;
 			zao[idx].type = n;
 			
 			break;
 		case 3:
-			//cout << "ĞèÒª" << 250 / prod << "¸ö»ØºÏÍê¹¤" << endl;
+			//cout << "â€“Ã‹â€œâ„¢" << 250 / prod << "âˆË†ÂªÃ¿âˆ«Å“Ã•ÃÏ€Â§" << endl;
 			zao[idx].oktime = 2.5 * round;
 			zao[idx].type = n;
 			
 			break;
 		case 4:
-			//cout << "ĞèÒª" << 100 / prod << "¸ö»ØºÏÍê¹¤" << endl;
+			//cout << "â€“Ã‹â€œâ„¢" << 100 / prod << "âˆË†ÂªÃ¿âˆ«Å“Ã•ÃÏ€Â§" << endl;
 			zao[idx].oktime = round;
 			zao[idx].type = n;
 			
 			break;
 		case 5:
-			cout << "Ñ§Ôº£ºµ±ÓĞÈË¿ÚÔÚ´Ëµ¥Ôª¸ñÊ±£¬+1¿Æ¼¼Öµ£¬Ã¿¸öÈË¿ÚÌá¹©µÄ¿Æ¼¼Öµ+0.2£¬Ã¿ÏàÁÚÒ»¸öÇøÓò+1¿Æ¼¼Öµ£¬Ã¿ÏàÁÚÒ»¸öÉ½ÂöµØÃ²+1¿Æ¼¼Öµ¡£ÕæÊµÉú²úÁ¦ÏûºÄÎª£º" <<round<< endl;
-			cout << "¾çÔº¹ã³¡£ºµ±ÓĞÈË¿ÚÔÚ´Ëµ¥Ôª¸ñÊ±£¬ + 1ÎÄ»¯Öµ£¬Ã¿¸öÈË¿ÚÌá¹©µÄÎÄ»¯Öµ + 0.2£¬Ã¿ÏàÁÚÒ»¸öÇøÓò + 1ÎÄ»¯Öµ£¬Ã¿ÏàÁÚÒ»¸öÆæ¹Û + 1ÎÄ»¯Öµ£¨¼´Ææ¹Û½¨Öş + 2ÎÄ»¯Öµ£©¡£ÕæÊµÉú²úÁ¦ÏûºÄÎª£º"<<round << endl;
-			cout << "Ææ¹Û£º + 20ÎÄ»¯Öµ¡£Ã¿ÏàÁÚÒ»¸öÆæ¹Û + 5ÎÄ»¯Öµ¡£ÕæÊµÉú²úÁ¦ÏûºÄÎª£º" <<2.5*round<< endl;
-			cout << "¹¤ÒµÇø£ºµ±ÓĞÈË¿ÚÔÚ´Ëµ¥Ôª¸ñÊ±£¬ + 2Éú²úÁ¦£¬Ã¿¸öÈË¿ÚÌá¹©µÄÉú²úÁ¦ + 2£¬Ã¿ÏàÁÚÒ»¸öÇøÓò + 1Éú²úÁ¦¡£ÕæÊµÉú²úÁ¦ÏûºÄÎª£º" <<round<< endl;
-			cout << "±¸×¢£ºÕæÊµÉú²úÁ¦ÏûºÄ£¨¼´ËùĞèÒªÍ¶ÈëµÄÉú²úÁ¦£©=Éú²úÁ¦»ù´¡Öµ*µ±Ç°»ØºÏÊı/»ØºÏ×ÜÊı¡£" << endl;
-			cout << "½¨ÖşÖ»ÄÜ½¨ÔÚ³ÇÊĞÁìµØÄÚ£¬²»ÄÜ½¨ÔÚ½üº£¡¢Éîº£»òÉ½ÂöÉÏ" << endl;
+			cout << "â€”ÃŸâ€˜âˆ«Â£âˆ«ÂµÂ±â€â€“Â»Ã€Ã¸â„â€˜â„Â¥Ã€Âµâ€¢â€˜â„¢âˆÃ’Â Â±Â£Â¨+1Ã¸âˆ†ÂºÂºÃ·ÂµÂ£Â¨âˆšÃ¸âˆË†Â»Ã€Ã¸â„ÃƒÂ·Ï€Â©ÂµÆ’Ã¸âˆ†ÂºÂºÃ·Âµ+0.2Â£Â¨âˆšÃ¸Å“â€¡Â¡â„â€œÂªâˆË†Â«Â¯â€Ãš+1Ã¸âˆ†ÂºÂºÃ·ÂµÂ£Â¨âˆšÃ¸Å“â€¡Â¡â„â€œÂªâˆË†â€¦Î©Â¬Ë†ÂµÃ¿âˆšâ‰¤+1Ã¸âˆ†ÂºÂºÃ·ÂµÂ°Â£â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å“Ëšâˆ«Æ’Å’â„¢Â£âˆ«" <<round<< endl;
+			cout << "Ã¦Ãâ€˜âˆ«Ï€â€â‰¥Â°Â£âˆ«ÂµÂ±â€â€“Â»Ã€Ã¸â„â€˜â„Â¥Ã€Âµâ€¢â€˜â„¢âˆÃ’Â Â±Â£Â¨ + 1Å’Æ’ÂªÃ˜Ã·ÂµÂ£Â¨âˆšÃ¸âˆË†Â»Ã€Ã¸â„ÃƒÂ·Ï€Â©ÂµÆ’Å’Æ’ÂªÃ˜Ã·Âµ + 0.2Â£Â¨âˆšÃ¸Å“â€¡Â¡â„â€œÂªâˆË†Â«Â¯â€Ãš + 1Å’Æ’ÂªÃ˜Ã·ÂµÂ£Â¨âˆšÃ¸Å“â€¡Â¡â„â€œÂªâˆË†âˆ†ÃŠÏ€â‚¬ + 1Å’Æ’ÂªÃ˜Ã·ÂµÂ£Â®ÂºÂ¥âˆ†ÃŠÏ€â‚¬Î©Â®Ã·Ë› + 2Å’Æ’ÂªÃ˜Ã·ÂµÂ£Â©Â°Â£â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å“Ëšâˆ«Æ’Å’â„¢Â£âˆ«"<<round << endl;
+			cout << "âˆ†ÃŠÏ€â‚¬Â£âˆ« + 20Å’Æ’ÂªÃ˜Ã·ÂµÂ°Â£âˆšÃ¸Å“â€¡Â¡â„â€œÂªâˆË†âˆ†ÃŠÏ€â‚¬ + 5Å’Æ’ÂªÃ˜Ã·ÂµÂ°Â£â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å“Ëšâˆ«Æ’Å’â„¢Â£âˆ«" <<2.5*round<< endl;
+			cout << "Ï€Â§â€œÂµÂ«Â¯Â£âˆ«ÂµÂ±â€â€“Â»Ã€Ã¸â„â€˜â„Â¥Ã€Âµâ€¢â€˜â„¢âˆÃ’Â Â±Â£Â¨ + 2â€¦Ë™â‰¤Ë™Â¡Â¶Â£Â¨âˆšÃ¸âˆË†Â»Ã€Ã¸â„ÃƒÂ·Ï€Â©ÂµÆ’â€¦Ë™â‰¤Ë™Â¡Â¶ + 2Â£Â¨âˆšÃ¸Å“â€¡Â¡â„â€œÂªâˆË†Â«Â¯â€Ãš + 1â€¦Ë™â‰¤Ë™Â¡Â¶Â°Â£â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å“Ëšâˆ«Æ’Å’â„¢Â£âˆ«" <<round<< endl;
+			cout << "Â±âˆâ—ŠÂ¢Â£âˆ«â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å“Ëšâˆ«Æ’Â£Â®ÂºÂ¥Ã€Ë˜â€“Ã‹â€œâ„¢Ã•âˆ‚Â»ÃÂµÆ’â€¦Ë™â‰¤Ë™Â¡Â¶Â£Â©=â€¦Ë™â‰¤Ë™Â¡Â¶ÂªË˜Â¥Â°Ã·Âµ*ÂµÂ±Â«âˆÂªÃ¿âˆ«Å“Â Ë/ÂªÃ¿âˆ«Å“â—Šâ€¹Â ËÂ°Â£" << endl;
+			cout << "Î©Â®Ã·Ë›Ã·ÂªÆ’â€¹Î©Â®â€˜â„â‰¥Â«Â â€“Â¡ÃÂµÃ¿Æ’â„Â£Â¨â‰¤ÂªÆ’â€¹Î©Â®â€˜â„Î©Â¸âˆ«Â£Â°Â¢â€¦Ã“âˆ«Â£ÂªÃšâ€¦Î©Â¬Ë†â€¦Å“" << endl;
 			break;
 
 		case 6:
@@ -96,11 +96,11 @@ void Controller::build()
 
 	} while (n == 5);
 
-	cout << "ÇëÊäÈëÄúÏë½¨Ôì³ÇÊĞµÄµ¥Ôª¸ñ×ø±ê£¨Á½Êı×Ö¼äÓÃ¿Õ¸ñ·Ö¸ô£©" << endl;
+	cout << "Â«ÃÂ â€°Â»ÃÆ’Ë™Å“ÃÎ©Â®â€˜Ãâ‰¥Â«Â â€“ÂµÆ’Âµâ€¢â€˜â„¢âˆÃ’â—ŠÂ¯Â±ÃÂ£Â®Â¡Î©Â Ëâ—ŠÃ·Âºâ€°â€âˆšÃ¸â€™âˆÃ’âˆ‘Ã·âˆÃ™Â£Â©" << endl;
 	cin >> x >> y;
 	while (bo[x][y] != 0||map[x][y].ifpop==WILD|| map[x][y].landform==OCEAN|| map[x][y].landform == SEA || map[x][y].landform == MOUNTAIN  )
 	{
-		cout << "±§Ç¸£¬Äúµ±Ç°ÎŞ·¨Ñ¡Ôñ´Ëµ¥Ôª¸ñ£¬ÇëÑ¡ÔñÆäËûµ¥Ôª¸ñ" << endl;
+		cout << "Â±ÃŸÂ«âˆÂ£Â¨Æ’Ë™ÂµÂ±Â«âˆÅ’ï¬âˆ‘Â®â€”Â°â€˜Ã’Â¥Ã€Âµâ€¢â€˜â„¢âˆÃ’Â£Â¨Â«Ãâ€”Â°â€˜Ã’âˆ†â€°Ã€ËšÂµâ€¢â€˜â„¢âˆÃ’" << endl;
 		cin >> x >> y;
 		
 	}
@@ -193,18 +193,18 @@ void Controller::tongji()
 
 void Controller::activity() {
 	char name;
-	cout << "ÇëÑ¡ÔñÒª½øĞĞµÄ²Ù×÷" << endl;
-	cout << "1£º´ú±íÑ§Êõ»áÒé" << endl;
-	cout << "2£º´ú±íÂşÕ¹" << endl;
-	cout << "3£º´ú±í¹¤ÒµÎïÁ÷" << endl;
-	cout << "4£º²é¿´°ïÖú" << endl;
-	cout << "5£º·µ»ØÉÏÒ»¼¶²Ëµ¥" << endl;
+	cout << "Â«Ãâ€”Â°â€˜Ã’â€œâ„¢Î©Â¯â€“â€“ÂµÆ’â‰¤Å¸â—ŠËœ" << endl;
+	cout << "1Â£âˆ«Â¥Ë™Â±ÃŒâ€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ" << endl;
+	cout << "2Â£âˆ«Â¥Ë™Â±ÃŒÂ¬Ë›â€™Ï€" << endl;
+	cout << "3Â£âˆ«Â¥Ë™Â±ÃŒÏ€Â§â€œÂµÅ’Ã”Â¡Ëœ" << endl;
+	cout << "4Â£âˆ«â‰¤ÃˆÃ¸Â¥âˆÃ”Ã·Ë™" << endl;
+	cout << "5Â£âˆ«âˆ‘ÂµÂªÃ¿â€¦Å“â€œÂªÂºâˆ‚â‰¤Ã€Âµâ€¢" << endl;
 	cin >> name;
 	there1:
 	if (name == '1') {
 		if (!check('1', endmeeting)) {
-			cout << "ÎŞ·¨½øĞĞÑ§Êõ»áÒé" << endl << "ÇëÑ¡Ôñ½ÓÏÂÀ´³¢ÊÔµÄ²½Öè:" << endl;
-			cout << "0 ´ú±íÍË³ö¾ÙĞĞ»áÒé\n1 ´ú±íÖØĞÂÑ¡Ôñ\n";
+			cout << "Å’ï¬âˆ‘Â®Î©Â¯â€“â€“â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ" << endl << "Â«Ãâ€”Â°â€˜Ã’Î©â€Å“Â¬Â¿Â¥â‰¥Â¢Â â€˜ÂµÆ’â‰¤Î©Ã·Ã‹:" << endl;
+			cout << "0 Â¥Ë™Â±ÃŒÃ•Ã€â‰¥Ë†Ã¦Å¸â€“â€“ÂªÂ·â€œÃˆ\n1 Â¥Ë™Â±ÃŒÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’\n";
 			cin >> name;
 			if (name == '0') return;
 			else activity();
@@ -217,8 +217,8 @@ void Controller::activity() {
 
 	if (name == '2') {
 		if (!check('2', endshow)) {
-			cout << "ÎŞ·¨½øĞĞÂşÕ¹" << endl << "ÇëÑ¡Ôñ½ÓÏÂÀ´³¢ÊÔµÄ²½Öè:" << endl;
-			cout << "0 ´ú±íÍË³ö¾ÙĞĞ»áÒé\n1 ´ú±íÖØĞÂÑ¡Ôñ\n";
+			cout << "Å’ï¬âˆ‘Â®Î©Â¯â€“â€“Â¬Ë›â€™Ï€" << endl << "Â«Ãâ€”Â°â€˜Ã’Î©â€Å“Â¬Â¿Â¥â‰¥Â¢Â â€˜ÂµÆ’â‰¤Î©Ã·Ã‹:" << endl;
+			cout << "0 Â¥Ë™Â±ÃŒÃ•Ã€â‰¥Ë†Ã¦Å¸â€“â€“ÂªÂ·â€œÃˆ\n1 Â¥Ë™Â±ÃŒÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’\n";
 			cin >> name;
 			if (name == '0') return;
 			else activity();
@@ -231,8 +231,8 @@ void Controller::activity() {
 
 	if (name == '3') {
 		if (!check('3', endlogistics)) {
-			cout << "ÎŞ·¨½øĞĞ¹¤ÒµÎïÁ÷" << endl << "ÇëÑ¡Ôñ½ÓÏÂÀ´³¢ÊÔµÄ²½Öè:" << endl;
-			cout << "0 ´ú±íÍË³ö¾ÙĞĞ»áÒé\n1 ´ú±íÖØĞÂÑ¡Ôñ\n";
+			cout << "Å’ï¬âˆ‘Â®Î©Â¯â€“â€“Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ" << endl << "Â«Ãâ€”Â°â€˜Ã’Î©â€Å“Â¬Â¿Â¥â‰¥Â¢Â â€˜ÂµÆ’â‰¤Î©Ã·Ã‹:" << endl;
+			cout << "0 Â¥Ë™Â±ÃŒÃ•Ã€â‰¥Ë†Ã¦Å¸â€“â€“ÂªÂ·â€œÃˆ\n1 Â¥Ë™Â±ÃŒÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’\n";
 			cin >> name;
 			if (name == '0') return;
 			else activity();
@@ -243,19 +243,19 @@ void Controller::activity() {
 		}
 	}
 
-	if (name == '4') { //²é¿´°ïÖú
-		cout << "Ñ§Êõ»áÒé£º±¾»ØºÏĞèÒªÏûºÄÕæÊµÉú²úÁ¦Îª" << 50.0 * prod / 100 << " Íê³ÉÊ±Ìá¹©5»ØºÏµÄ30popµã¿Æ¼¼Öµ"<<endl;
-		cout << "ÂşÕ¹£º±¾»ØºÏĞèÒªÏûºÄÕæÊµÉú²úÁ¦Îª" << 50.0 * prod / 100 << " Íê³ÉÊ±Ìá¹©5»ØºÏµÄ30popµãÎÄ»¯Öµ" << endl;
-		cout << "¹¤ÒµÎïÁ÷£º±¾»ØºÏĞèÒªÏûºÄÕæÊµÉú²úÁ¦Îª" << 50.0 * prod / 100 << " Íê³ÉÊ±Ìá¹©5»ØºÏµÄ30popµãÉú²úÁ¦" << endl;
-		cout << "ÇëÊäÈë½ÓÏÂÀ´µÄ²Ù×÷£º" << endl;
-		cout << "1£º´ú±íÑ§Êõ»áÒé\n2£º´ú±íÂşÕ¹\n3£º´ú±í¹¤ÒµÎïÁ÷\n4£º·µ»ØÉÏÒ»¼¶²Ëµ¥\n";
+	if (name == '4') { //â‰¤ÃˆÃ¸Â¥âˆÃ”Ã·Ë™
+		cout << "â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆÂ£âˆ«Â±Ã¦ÂªÃ¿âˆ«Å“â€“Ã‹â€œâ„¢Å“Ëšâˆ«Æ’â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å’â„¢" << 50.0 * prod / 100 << " Ã•Ãâ‰¥â€¦Â Â±ÃƒÂ·Ï€Â©5ÂªÃ¿âˆ«Å“ÂµÆ’30popÂµâ€Ã¸âˆ†ÂºÂºÃ·Âµ"<<endl;
+		cout << "Â¬Ë›â€™Ï€Â£âˆ«Â±Ã¦ÂªÃ¿âˆ«Å“â€“Ã‹â€œâ„¢Å“Ëšâˆ«Æ’â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å’â„¢" << 50.0 * prod / 100 << " Ã•Ãâ‰¥â€¦Â Â±ÃƒÂ·Ï€Â©5ÂªÃ¿âˆ«Å“ÂµÆ’30popÂµâ€Å’Æ’ÂªÃ˜Ã·Âµ" << endl;
+		cout << "Ï€Â§â€œÂµÅ’Ã”Â¡ËœÂ£âˆ«Â±Ã¦ÂªÃ¿âˆ«Å“â€“Ã‹â€œâ„¢Å“Ëšâˆ«Æ’â€™ÃŠÂ Âµâ€¦Ë™â‰¤Ë™Â¡Â¶Å’â„¢" << 50.0 * prod / 100 << " Ã•Ãâ‰¥â€¦Â Â±ÃƒÂ·Ï€Â©5ÂªÃ¿âˆ«Å“ÂµÆ’30popÂµâ€â€¦Ë™â‰¤Ë™Â¡Â¶" << endl;
+		cout << "Â«ÃÂ â€°Â»ÃÎ©â€Å“Â¬Â¿Â¥ÂµÆ’â‰¤Å¸â—ŠËœÂ£âˆ«" << endl;
+		cout << "1Â£âˆ«Â¥Ë™Â±ÃŒâ€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ\n2Â£âˆ«Â¥Ë™Â±ÃŒÂ¬Ë›â€™Ï€\n3Â£âˆ«Â¥Ë™Â±ÃŒÏ€Â§â€œÂµÅ’Ã”Â¡Ëœ\n4Â£âˆ«âˆ‘ÂµÂªÃ¿â€¦Å“â€œÂªÂºâˆ‚â‰¤Ã€Âµâ€¢\n";
 		cin >> name;
 		if (name == '4') name = '5';
 		goto there1;
 
 	}
 
-	if (name == '5') {	//·µ»ØÉÏÒ»¼¶
+	if (name == '5') {	//âˆ‘ÂµÂªÃ¿â€¦Å“â€œÂªÂºâˆ‚
 		return;
 	}
 }
@@ -306,7 +306,7 @@ void Controller::victory()
 	}
 	if (alltech >= 500 || (num >= 5 && allcul >= 350) || score > 500)
 	{
-		cout << "¹§Ï²Äã£¡Ê¤ÀûÀ²£¡";
+		cout << "Ï€ÃŸÅ“â‰¤Æ’â€Â£Â°Â Â§Â¿ËšÂ¿â‰¤Â£Â°";
 		flagv = true;
 	}
 }
@@ -317,19 +317,19 @@ bool Controller::check(char name, int endtime) {
 	
 	    if (name == '1') {
 	        if (endmeeting>0) {
-	            cout << "µ±Ç°»î¶¯ÕıÔÚ½øĞĞ£¬ÇëÖØĞÂÑ¡Ôñ»î¶¯" << endl;
+	            cout << "ÂµÂ±Â«âˆÂªÃ“âˆ‚Ã˜â€™Ëâ€˜â„Î©Â¯â€“â€“Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’ÂªÃ“âˆ‚Ã˜" << endl;
 	            return false;
 	        }
 	    }
 	    if (name == '2') {
 	        if (endshow > 0) {
-	            cout << "µ±Ç°»î¶¯ÕıÔÚ½øĞĞ£¬ÇëÖØĞÂÑ¡Ôñ»î¶¯" << endl;
+	            cout << "ÂµÂ±Â«âˆÂªÃ“âˆ‚Ã˜â€™Ëâ€˜â„Î©Â¯â€“â€“Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’ÂªÃ“âˆ‚Ã˜" << endl;
 	            return false;
 	        }
 	    }
 	    if (name == '3') {
 	        if (endlogistics > 0) {
-	            cout << "µ±Ç°»î¶¯ÕıÔÚ½øĞĞ£¬ÇëÖØĞÂÑ¡Ôñ»î¶¯" << endl;
+	            cout << "ÂµÂ±Â«âˆÂªÃ“âˆ‚Ã˜â€™Ëâ€˜â„Î©Â¯â€“â€“Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’ÂªÃ“âˆ‚Ã˜" << endl;
 	            return false;
 	        }
 	    }
@@ -341,7 +341,7 @@ bool Controller::check(char name, int endtime) {
 					if (map[row][col].type == 1) return true;
 				}
 			}
-			cout << "Î´¼ì²âµ½ÓĞÑ§Ôº" << endl;
+			cout << "Å’Â¥ÂºÃâ‰¤â€šÂµÎ©â€â€“â€”ÃŸâ€˜âˆ«" << endl;
 			return false; 
 			break;
 		case '2': 
@@ -350,7 +350,7 @@ bool Controller::check(char name, int endtime) {
 					if (map[row][col].type == 2) return true;
 				}
 			}
-			cout << "Î´¼ì²âµ½ÓĞ¾çÔº¹ã³¡" << endl;
+			cout << "Å’Â¥ÂºÃâ‰¤â€šÂµÎ©â€â€“Ã¦Ãâ€˜âˆ«Ï€â€â‰¥Â°" << endl;
 			return false; 
 			break;
 		case '3':
@@ -359,7 +359,7 @@ bool Controller::check(char name, int endtime) {
 					if (map[row][col].type == 3) return true;
 				}
 			}
-			cout << "Î´¼ì²âµ½ÓĞ¹¤ÒµÇø" << endl;
+			cout << "Å’Â¥ÂºÃâ‰¤â€šÂµÎ©â€â€“Ï€Â§â€œÂµÂ«Â¯" << endl;
 			return false;
 			break;
 
@@ -368,16 +368,19 @@ bool Controller::check(char name, int endtime) {
 }
 
 void Controller::default_statistics(char current_distribution) {
-	if (current_distribution == '1') {  // Ñ§Êõ»áÒé
+	if (current_distribution == '1') {  // â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ
 		endmeeting -= prod ;
+		if (endmeeting <= 0) lastmeeting[round] = 5;
 	}
-	if (current_distribution == '2') {  // ÂşÕ¹
+	if (current_distribution == '2') {  // Â¬Ë›â€™Ï€
 		endshow -= prod ;
+		if (endshow <= 0) lastshow[round] = 5;
 	}
-	if (current_distribution == '3') {  // ¹¤ÒµÎïÁ÷
+	if (current_distribution == '3') {  // Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ
 		endlogistics -= prod ;
+		if (endlogistics <= 0) lastlogistics[round] = 5;
 	}
-	if (current_distribution == '0') {  // ¹¤ÒµÎïÁ÷
+	if (current_distribution == '0') {  // Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ
 		if(zao[currenti].oktime>0)
 			zao[currenti].oktime -= prod;
 	}
@@ -393,7 +396,7 @@ void Controller::default_statistics(char current_distribution) {
 void Controller::distribute(){
 	int m, ii, h;
 	bool flag = false;
-	cout << "ÊäÈë1±íÊ¾ÓÃÓÚ½¨Ôì½¨Öş"<<endl<<"ÊäÈë2±íÊ¾ÓÃÓÚ¾Ù°ì»î¶¯"<<endl<<"ÊäÈë3±íÊ¾·µ»ØÉÏÒ»¼¶²Ëµ¥"<<endl;
+	cout << "Â â€°Â»Ã1Â±ÃŒÂ Ã¦â€âˆšâ€â„Î©Â®â€˜ÃÎ©Â®Ã·Ë›"<<endl<<"Â â€°Â»Ã2Â±ÃŒÂ Ã¦â€âˆšâ€â„Ã¦Å¸âˆÃÂªÃ“âˆ‚Ã˜"<<endl<<"Â â€°Â»Ã3Â±ÃŒÂ Ã¦âˆ‘ÂµÂªÃ¿â€¦Å“â€œÂªÂºâˆ‚â‰¤Ã€Âµâ€¢"<<endl;
 	
 	cin >> m;
 	if (m == 3) return;
@@ -405,19 +408,19 @@ void Controller::distribute(){
 			{
 				flag = true;
 				if(zao[ii].type==1)
-					cout << ii << ":ÔÚ" << zao[ii].xx << "," << zao[ii].yy << "Ñ§Ôº½¨ÔìÖĞ£¬»¹ĞèÉú²úÁ¦" << zao[ii].oktime << "µã" << endl;
+					cout << ii << ":â€˜â„" << zao[ii].xx << "," << zao[ii].yy << "â€”ÃŸâ€˜âˆ«Î©Â®â€˜ÃÃ·â€“Â£Â¨ÂªÏ€â€“Ã‹â€¦Ë™â‰¤Ë™Â¡Â¶" << zao[ii].oktime << "Âµâ€" << endl;
 				if (zao[ii].type == 2)
-					cout << ii << ":ÔÚ" << zao[ii].xx << "," << zao[ii].yy << "¾çÔº¹ã³¡½¨ÔìÖĞ£¬»¹ĞèÉú²úÁ¦" << zao[ii].oktime << "µã" << endl;
+					cout << ii << ":â€˜â„" << zao[ii].xx << "," << zao[ii].yy << "Ã¦Ãâ€˜âˆ«Ï€â€â‰¥Â°Î©Â®â€˜ÃÃ·â€“Â£Â¨ÂªÏ€â€“Ã‹â€¦Ë™â‰¤Ë™Â¡Â¶" << zao[ii].oktime << "Âµâ€" << endl;
 				if (zao[ii].type == 3)
-					cout << ii << ":ÔÚ" << zao[ii].xx << "," << zao[ii].yy << "Ææ¹Û½¨ÔìÖĞ£¬»¹ĞèÉú²úÁ¦" << zao[ii].oktime << "µã" << endl;
+					cout << ii << ":â€˜â„" << zao[ii].xx << "," << zao[ii].yy << "âˆ†ÃŠÏ€â‚¬Î©Â®â€˜ÃÃ·â€“Â£Â¨ÂªÏ€â€“Ã‹â€¦Ë™â‰¤Ë™Â¡Â¶" << zao[ii].oktime << "Âµâ€" << endl;
 				if (zao[ii].type == 4)
-					cout << ii << ":ÔÚ" << zao[ii].xx << "," << zao[ii].yy << "¹¤ÒµÇø½¨ÔìÖĞ£¬»¹ĞèÉú²úÁ¦" << zao[ii].oktime << "µã" << endl;
+					cout << ii << ":â€˜â„" << zao[ii].xx << "," << zao[ii].yy << "Ï€Â§â€œÂµÂ«Â¯Î©Â®â€˜ÃÃ·â€“Â£Â¨ÂªÏ€â€“Ã‹â€¦Ë™â‰¤Ë™Â¡Â¶" << zao[ii].oktime << "Âµâ€" << endl;
 			}
 				
 		}
 		if (flag == true)
 		{
-			cout << "ÇëÊäÈëÑ¡ÏîÇ°µÄ±àºÅÀ´Ñ¡Ôñ½«Éú²úÁ¦Í¶ÈëÄÄÏî»î¶¯ÖĞ" << endl;
+			cout << "Â«ÃÂ â€°Â»Ãâ€”Â°Å“Ã“Â«âˆÂµÆ’Â±â€¡âˆ«â‰ˆÂ¿Â¥â€”Â°â€˜Ã’Î©Â´â€¦Ë™â‰¤Ë™Â¡Â¶Ã•âˆ‚Â»ÃÆ’Æ’Å“Ã“ÂªÃ“âˆ‚Ã˜Ã·â€“" << endl;
 			cin >> h;
 			zao[h].oktime -= prod;
 			currenti = h;
@@ -426,7 +429,7 @@ void Controller::distribute(){
 		}
 		else
 		{
-			cout << "ÄãÃ»ÓĞÕıÔÚ½¨ÔìµÄ½¨Öş";
+			cout << "Æ’â€âˆšÂªâ€â€“â€™Ëâ€˜â„Î©Â®â€˜ÃÂµÆ’Î©Â®Ã·Ë›";
 		}
 		
 
@@ -435,12 +438,12 @@ void Controller::distribute(){
 	if (m == 2)
 	{
 		
-		if (endmeeting <= 0 && endshow <= 0 && endlogistics <= 0 ) cout << "µ±Ç°Î´¾Ù°ìÈÎºÎ»î¶¯" << endl;
+		if (endmeeting <= 0 && endshow <= 0 && endlogistics <= 0 ) cout << "ÂµÂ±Â«âˆÅ’Â¥Ã¦Å¸âˆÃÂ»Å’âˆ«Å’ÂªÃ“âˆ‚Ã˜" << endl;
 		else {
-			cout << "µ±Ç°Õı¾Ù°ìµÄ»î¶¯ÓĞ£º" << endl;
-			if (endmeeting > 0) cout << "Ñ§Êõ»áÒé " << "»¹Ğè" <<endmeeting<<"µãÉú²úÁ¦" <<endl;
-			if (endshow > 0) cout << "ÂşÕ¹ " << "»¹Ğè" << endshow << "µãÉú²úÁ¦"<<endl;
-			if (endlogistics > 0) cout << "¹¤ÒµÎïÁ÷ " << "»¹Ğè" << endlogistics << "µãÉú²úÁ¦"<<endl;
+			cout << "ÂµÂ±Â«âˆâ€™ËÃ¦Å¸âˆÃÂµÆ’ÂªÃ“âˆ‚Ã˜â€â€“Â£âˆ«" << endl;
+			if (endmeeting > 0) cout << "â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ " << "ÂªÏ€â€“Ã‹" <<endmeeting<<"Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶" <<endl;
+			if (endshow > 0) cout << "Â¬Ë›â€™Ï€ " << "ÂªÏ€â€“Ã‹" << endshow << "Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶"<<endl;
+			if (endlogistics > 0) cout << "Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ " << "ÂªÏ€â€“Ã‹" << endlogistics << "Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶"<<endl;
 			
 			int newinput = 0;
 			int status = 0;
@@ -455,97 +458,97 @@ void Controller::distribute(){
 
 			switch (status) {
 			case 1:
-				cout << "ÇëÑ¡Ôñ·ÖÅäÉú²úÁ¦µÄ»î¶¯£º" << endl;
-				cout << "1 Ñ§Êõ»áÒé\n2 ÂşÕ¹\n3 ¹¤ÒµÎïÁ÷\n";
+				cout << "Â«Ãâ€”Â°â€˜Ã’âˆ‘Ã·â‰ˆâ€°â€¦Ë™â‰¤Ë™Â¡Â¶ÂµÆ’ÂªÃ“âˆ‚Ã˜Â£âˆ«" << endl;
+				cout << "1 â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ\n2 Â¬Ë›â€™Ï€\n3 Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ\n";
 				cin >> newinput;
 				if (newinput == 1) {
 					endmeeting -= prod ;
 					current_distribution = '1';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
 				else if (newinput == 2) {
 					endshow -= prod ;
 					current_distribution = '2';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
 				else if (newinput == 3) {
 					endlogistics -= prod ;
 					current_distribution = '3';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
-				else cout << "·ÖÅäÊ§°Ü" << endl;
+				else cout << "âˆ‘Ã·â‰ˆâ€°Â ÃŸâˆâ€¹" << endl;
 				break;
 			case 2:
-				cout << "ÇëÑ¡Ôñ·ÖÅäÉú²úÁ¦µÄ»î¶¯£º" << endl;
-				cout << "1 Ñ§Êõ»áÒé\n2 ÂşÕ¹\n";
+				cout << "Â«Ãâ€”Â°â€˜Ã’âˆ‘Ã·â‰ˆâ€°â€¦Ë™â‰¤Ë™Â¡Â¶ÂµÆ’ÂªÃ“âˆ‚Ã˜Â£âˆ«" << endl;
+				cout << "1 â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ\n2 Â¬Ë›â€™Ï€\n";
 				cin >> newinput;
 				if (newinput == 1) {
 					endmeeting -= prod;
 					current_distribution = '1';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
 				else if (newinput == 2) {
 					endshow -= prod;
 					current_distribution = '2';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
-				else cout << "·ÖÅäÊ§°Ü" << endl;
+				else cout << "âˆ‘Ã·â‰ˆâ€°Â ÃŸâˆâ€¹" << endl;
 				break;
 			case 3:
-				cout << "ÇëÑ¡Ôñ·ÖÅäÉú²úÁ¦µÄ»î¶¯£º" << endl;
-				cout << "1 Ñ§Êõ»áÒé\n2 ¹¤ÒµÎïÁ÷\n";
+				cout << "Â«Ãâ€”Â°â€˜Ã’âˆ‘Ã·â‰ˆâ€°â€¦Ë™â‰¤Ë™Â¡Â¶ÂµÆ’ÂªÃ“âˆ‚Ã˜Â£âˆ«" << endl;
+				cout << "1 â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ\n2 Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ\n";
 				cin >> newinput;
 				if (newinput == 1) {
 					endmeeting -= prod ;
 					current_distribution = '1';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
 				else if (newinput == 2) {
 					endlogistics -= prod;
 					current_distribution = '3';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
-				else cout << "·ÖÅäÊ§°Ü" << endl;
+				else cout << "âˆ‘Ã·â‰ˆâ€°Â ÃŸâˆâ€¹" << endl;
 				break;
 			case 4:
-				cout << "ÇëÑ¡Ôñ·ÖÅäÉú²úÁ¦µÄ»î¶¯£º" << endl;
-				cout << "1 ÂşÕ¹\n2 ¹¤ÒµÎïÁ÷\n";
+				cout << "Â«Ãâ€”Â°â€˜Ã’âˆ‘Ã·â‰ˆâ€°â€¦Ë™â‰¤Ë™Â¡Â¶ÂµÆ’ÂªÃ“âˆ‚Ã˜Â£âˆ«" << endl;
+				cout << "1 Â¬Ë›â€™Ï€\n2 Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ\n";
 				cin >> newinput;
 				if (newinput == 1) {
 					endshow -= prod;
 					current_distribution = '2';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
 				else if (newinput == 2) {
 					endlogistics -= prod ;
 					current_distribution = '3';
-					cout << "·ÖÅä³É¹¦£¡" << endl;
+					cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 					flagd = true;
 				}
-				else cout << "·ÖÅäÊ§°Ü" << endl;
+				else cout << "âˆ‘Ã·â‰ˆâ€°Â ÃŸâˆâ€¹" << endl;
 				break;
 			case 5:
 				endmeeting -= prod ;
 				current_distribution = '1';
-				cout << "·ÖÅä³É¹¦£¡" << endl;
+				cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 				break;
 			case 6:
 				endlogistics -= prod;
 				current_distribution = '3';
-				cout << "·ÖÅä³É¹¦£¡" << endl;
+				cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 				break;
 			case 7:
 				endshow -= prod ;
 				current_distribution = '2';
-				cout << "·ÖÅä³É¹¦£¡" << endl;
+				cout << "âˆ‘Ã·â‰ˆâ€°â‰¥â€¦Ï€Â¶Â£Â°" << endl;
 				break;
 			}
 			
@@ -577,15 +580,16 @@ void Controller::updatepop()
 
 void Controller::expansion() {
 	int row, col;
-	if (allcul == 2 * previouscul) {
-		cout << "ÄúµÄÎÄ»¯ÖµÒÑ·­±¶£¬¿ÉÒÔÀ©ÕÅÒ»¸ñÍÁµØ" << endl;
-		cout << "ÇëÑ¡ÔñÊÇ·ñÀ©ÕÅÍÁµØ" << endl;
-		cout << "0 ·ñ\n1 ÊÇ\n";
+	if (allcul >= 2 * previouscul) {
+		cout << "Æ’Ë™ÂµÆ’Å’Æ’ÂªÃ˜Ã·Âµâ€œâ€”âˆ‘â‰ Â±âˆ‚Â£Â¨Ã¸â€¦â€œâ€˜Â¿Â©â€™â‰ˆâ€œÂªâˆÃ’Ã•Â¡ÂµÃ¿" << endl;
+		cout << "Â«Ãâ€”Â°â€˜Ã’Â Â«âˆ‘Ã’Â¿Â©â€™â‰ˆÃ•Â¡ÂµÃ¿" << endl;
+		cout << "0 âˆ‘Ã’\n1 Â Â«\n";
 		bool choice;
 		cin >> choice;
 		if (choice == 0) return;
 		else {
-			cout << "ÇëÊäÈëÒªÀ©ÕÅÎªÍÁµØµÄ×ø±ê£¨Á½Êı×Ö¼äÒÔ¿Õ¸ñ·Ö¸ô£©" << endl;
+			
+			cout << "Â«ÃÂ â€°Â»Ãâ€œâ„¢Â¿Â©â€™â‰ˆÅ’â„¢Ã•Â¡ÂµÃ¿ÂµÆ’â—ŠÂ¯Â±ÃÂ£Â®Â¡Î©Â Ëâ—ŠÃ·Âºâ€°â€œâ€˜Ã¸â€™âˆÃ’âˆ‘Ã·âˆÃ™Â£Â©" << endl;
 			
 			cin >> row;
 			
@@ -593,12 +597,12 @@ void Controller::expansion() {
 
 			bool status = map[row][col].ifpop == WILD && (map[row - 1][col].ifpop != WILD || map[row + 1][col].ifpop != WILD || map[row][col - 1].ifpop != WILD || map[row][col + 1].ifpop != WILD);
 				if (status == true) {
-					map[row][col].ifpop == OWNED;
+					map[row][col].ifpop = OWNED;
 				}
 				else {
-					cout << "¸ÃÆ¬ÍÁµØÏàÁÚµØÇøÎªWILD£¬²»ÄÜÀ©ÕÅÍÁµØ" << endl;
-					cout << "ÇëÊäÈë½ÓÏÂÀ´µÄ²Ù×÷£º" << endl;
-					cout << "0 ÍË³öÀ©ÕÅÍÁµØ\n1 ÖØĞÂÑ¡ÔñÀ©ÕÅÍÁµØ×ø±ê" << endl;
+					cout << "âˆâˆšâˆ†Â¨Ã•Â¡ÂµÃ¿Å“â€¡Â¡â„ÂµÃ¿Â«Â¯Å’â„¢WILDÂ£Â¨â‰¤ÂªÆ’â€¹Â¿Â©â€™â‰ˆÃ•Â¡ÂµÃ¿" << endl;
+					cout << "Â«ÃÂ â€°Â»ÃÎ©â€Å“Â¬Â¿Â¥ÂµÆ’â‰¤Å¸â—ŠËœÂ£âˆ«" << endl;
+					cout << "0 Ã•Ã€â‰¥Ë†Â¿Â©â€™â‰ˆÃ•Â¡ÂµÃ¿\n1 Ã·Ã¿â€“Â¬â€”Â°â€˜Ã’Â¿Â©â€™â‰ˆÃ•Â¡ÂµÃ¿â—ŠÂ¯Â±Ã" << endl;
 					cin >> choice;
 					if (choice == 0) return;
 					else expansion();
@@ -611,11 +615,11 @@ void Controller::expansion() {
 
 
 
-//ÒÔÏÂÎªcase1
-//static int k = 0;//kÓÃÓÚÅĞ¶ÏÊÇ·ñµÚ¶ş²½£¬ÄÚ²¿ÔËËã
-bool select_poptrsf(Controller& controller)//µ÷ÈëµÄÀàĞÍÒÔcellÎªÖ÷£¬Ö±½ÓÓÃmap¡¾¡¿¡¾¡¿À´»ñÈ¡Ä³¸ñ×ÓµÄÊı¾İ
+//â€œâ€˜Å“Â¬Å’â„¢case1
+//static int k = 0;//kâ€âˆšâ€â„â‰ˆâ€“âˆ‚Å“Â Â«âˆ‘Ã’Âµâ„âˆ‚Ë›â‰¤Î©Â£Â¨Æ’â„â‰¤Ã¸â€˜Ã€Ã€â€
+bool select_poptrsf(Controller& controller)//ÂµËœÂ»ÃÂµÆ’Â¿â€¡â€“Ã•â€œâ€˜cellÅ’â„¢Ã·ËœÂ£Â¨Ã·Â±Î©â€â€âˆšmapÂ°Ã¦Â°Ã¸Â°Ã¦Â°Ã¸Â¿Â¥ÂªÃ’Â»Â°Æ’â‰¥âˆÃ’â—Šâ€ÂµÆ’Â ËÃ¦â€º
 {
-	int m1, n1, m, n;//m is ºá×ø±ê£¬n is ×İ×ø±ê
+	int m1, n1, m, n;//m is âˆ«Â·â—ŠÂ¯Â±ÃÂ£Â¨n is â—Šâ€ºâ—ŠÂ¯Â±Ã
 	if (coord_1(controller,m, n) == false) { return false; }
 	if (judge_coord_1(controller, m, n) == false) { return false; }
 	if (coord_2(controller,m1, n1) == false) { return false; }
@@ -624,16 +628,16 @@ bool select_poptrsf(Controller& controller)//µ÷ÈëµÄÀàĞÍÒÔcellÎªÖ÷£¬Ö±½ÓÓÃmap¡¾¡¿
 }
 bool coord_1(Controller& controller,int& m, int& n)
 {
-	cout << "ÇëÒÀ´ÎÊäÈëÒªÇ¨ÒÆÈË¿ÚµÄÄ¿µÄÍÁµØºá×İ×ø±ê£º" << endl;
-	cout << "·µ»Ø¿ØÖÆÃæ°åÊäÈë-1;Ñ¡¶¨ÊĞÖĞĞÄÊäÈë¿ì½İ¼ü-2 " << endl;
+	cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»Ãâ€œâ„¢Â«Â®â€œâˆ†Â»Ã€Ã¸â„ÂµÆ’Æ’Ã¸ÂµÆ’Ã•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±ÃÂ£âˆ«" << endl;
+	cout << "âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1;â€”Â°âˆ‚Â®Â â€“Ã·â€“â€“Æ’Â â€°Â»ÃÃ¸ÃÎ©â€ºÂºÂ¸-2 " << endl;
 	cin >> m;
 	if (m == -1) { return false; }
 	else if (m == -2) { m = controller.m_centre; n= controller.n_centre; }
 	else { cin >> n; }
 	while (m < 0 || m>19 || n < 0 || n>19)
 	{
-		cout << "×ø±ê·¶Î§Îª0-19£¬ÇëÖØĞÂÊäÈë " << endl;
-		cout << "ÇëÒÀ´ÎÊäÈëÒªÇ¨ÒÆÈË¿ÚµÄÄ¿µÄÍÁµØºá×İ×ø±ê£º£¨·µ»Ø¿ØÖÆÃæ°åÊäÈë-1£©" << endl;
+		cout << "â—ŠÂ¯Â±Ãâˆ‘âˆ‚Å’ÃŸÅ’â„¢0-19Â£Â¨Â«ÃÃ·Ã¿â€“Â¬Â â€°Â»Ã " << endl;
+		cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»Ãâ€œâ„¢Â«Â®â€œâˆ†Â»Ã€Ã¸â„ÂµÆ’Æ’Ã¸ÂµÆ’Ã•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±ÃÂ£âˆ«Â£Â®âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1Â£Â©" << endl;
 		cin >> m;
 		if (m == -1) { return false; }
 		cin >> n;
@@ -641,24 +645,24 @@ bool coord_1(Controller& controller,int& m, int& n)
 	/*cin >> n;
 	while (n < 0 || n>19)
 	{
-		cout << "×ø±ê·¶Î§Îª0-19£¬ÇëÖØĞÂÊäÈë£º " << endl;
-		cout << "ÇëÊäÈëºá×ø±ê£º" << endl;
+		cout << "â—ŠÂ¯Â±Ãâˆ‘âˆ‚Å’ÃŸÅ’â„¢0-19Â£Â¨Â«ÃÃ·Ã¿â€“Â¬Â â€°Â»ÃÂ£âˆ« " << endl;
+		cout << "Â«ÃÂ â€°Â»Ãâˆ«Â·â—ŠÂ¯Â±ÃÂ£âˆ«" << endl;
 		cin >> n;
 	}*/
 	return true;
 }
 bool coord_2(Controller& controller,int& m1, int& n1)
 {
-	cout << "ÇëÒÀ´ÎÊäÈëÒªÇ¨ÒÆÈË¿ÚÄ¿Ç°ËùÔÚÍÁµØºá×İ×ø±ê£º" << endl;
-	cout << "·µ»Ø¿ØÖÆÃæ°åÊäÈë-1;Ñ¡¶¨ÊĞÖĞĞÄÊäÈë¿ì½İ¼ü-2 " << endl;
+	cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»Ãâ€œâ„¢Â«Â®â€œâˆ†Â»Ã€Ã¸â„Æ’Ã¸Â«âˆÃ€Ë˜â€˜â„Ã•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±ÃÂ£âˆ«" << endl;
+	cout << "âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1;â€”Â°âˆ‚Â®Â â€“Ã·â€“â€“Æ’Â â€°Â»ÃÃ¸ÃÎ©â€ºÂºÂ¸-2 " << endl;
 	cin >> m1;
 	if (m1 == -1) { return false; }
 	else if (m1 == -2) { m1 = controller.m_centre; n1 = controller.n_centre; }
 	else { cin >> n1; }
 	while (m1 < 0 || m1>19 || n1 < 0 || n1>19)
 	{
-		cout << "×ø±ê·¶Î§Îª0-19£¬ÇëÖØĞÂÊäÈë " << endl;
-		cout << "ÇëÒÀ´ÎÊäÈëÒªÇ¨ÒÆÈË¿ÚµÄÄ¿Ç°ÍÁµØºá×İ×ø±ê£º£¨·µ»Ø¿ØÖÆÃæ°åÊäÈë-1£©" << endl;
+		cout << "â—ŠÂ¯Â±Ãâˆ‘âˆ‚Å’ÃŸÅ’â„¢0-19Â£Â¨Â«ÃÃ·Ã¿â€“Â¬Â â€°Â»Ã " << endl;
+		cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»Ãâ€œâ„¢Â«Â®â€œâˆ†Â»Ã€Ã¸â„ÂµÆ’Æ’Ã¸Â«âˆÃ•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±ÃÂ£âˆ«Â£Â®âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1Â£Â©" << endl;
 		cin >> m1;
 		if (m1 == -1) { return false; }
 		cin >> n1;
@@ -666,8 +670,8 @@ bool coord_2(Controller& controller,int& m1, int& n1)
 	/*cin >> n;
 	while (n < 0 || n>19)
 	{
-		cout << "×ø±ê·¶Î§Îª0-19£¬ÇëÖØĞÂÊäÈë£º " << endl;
-		cout << "ÇëÊäÈëºá×ø±ê£º" << endl;
+		cout << "â—ŠÂ¯Â±Ãâˆ‘âˆ‚Å’ÃŸÅ’â„¢0-19Â£Â¨Â«ÃÃ·Ã¿â€“Â¬Â â€°Â»ÃÂ£âˆ« " << endl;
+		cout << "Â«ÃÂ â€°Â»Ãâˆ«Â·â—ŠÂ¯Â±ÃÂ£âˆ«" << endl;
 		cin >> n;
 	}*/
 	return true;
@@ -678,41 +682,41 @@ bool judge_coord_1(Controller& controller, int& m, int& n)
 	int j = n;
 	if (controller.map[i][j].landform == OCEAN)
 	{
-		cout << "µØĞÎÎªÉîº££¬ÎŞ·¨·ÖÅäÈË¿Ú,ÇëÖØĞÂÑ¡Ôñ" << endl;
+		cout << "ÂµÃ¿â€“Å’Å’â„¢â€¦Ã“âˆ«Â£Â£Â¨Å’ï¬âˆ‘Â®âˆ‘Ã·â‰ˆâ€°Â»Ã€Ã¸â„,Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
 		if (coord_1(controller,m, n) == false) { return false; }
 		judge_coord_1(controller, m, n);
 	}
 	else if (controller.map[i][j].landform == MOUNTAIN)
 	{
-		cout << "µØĞÎÎªÉ½Âö£¬ÎŞ·¨·ÖÅäÈË¿Ú,ÇëÖØĞÂÑ¡Ôñ" << endl;
+		cout << "ÂµÃ¿â€“Å’Å’â„¢â€¦Î©Â¬Ë†Â£Â¨Å’ï¬âˆ‘Â®âˆ‘Ã·â‰ˆâ€°Â»Ã€Ã¸â„,Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
 		if (coord_1(controller,m, n) == false) { return false; }
 		judge_coord_1(controller, m, n);
 	}
 	else if (controller.map[i][j].ifpop == WILD)
 	{
-		cout << "ÍÁµØÎ´±»¿ª·¢,ÇëÖØĞÂÑ¡Ôñ" << endl;
+		cout << "Ã•Â¡ÂµÃ¿Å’Â¥Â±ÂªÃ¸â„¢âˆ‘Â¢,Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
 		if (coord_1(controller,m, n) == false) { return false; }
 		judge_coord_1(controller, m, n);
 	}
 	else if (controller.map[i][j].ifpop == COLONIZED)
 	{
-		cout << "ÍÁµØÈËÊıÒÑÂú£¬ÇëÖØĞÂÑ¡Ôñ" << endl;
+		cout << "Ã•Â¡ÂµÃ¿Â»Ã€Â Ëâ€œâ€”Â¬Ë™Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
 		if (coord_1(controller,m, n) == false) { return false; }
 		judge_coord_1(controller, m, n);
 	}
 	if (controller.map[i][j].ifpop == OWNED) {
 		 return true;
-	}//·ûºÏÌõ¼ş£¬½áÊø·ÖÅä
+	}//âˆ‘Ëšâˆ«Å“ÃƒÄ±ÂºË›Â£Â¨Î©Â·Â Â¯âˆ‘Ã·â‰ˆâ€°
 	
 }
-bool judge_coord_2(Controller& controller, int& m1, int& n1)//¶Ô1.ÖĞabcdeµÈµÈÅĞ¶Ï
+bool judge_coord_2(Controller& controller, int& m1, int& n1)//âˆ‚â€˜1.Ã·â€“abcdeÂµÂ»ÂµÂ»â‰ˆâ€“âˆ‚Å“
 {
 	
 	if (controller.map[m1][n1].ifpop != COLONIZED)
 	{
 		if (controller.map[m1][n1].type != 6)
 		{
-			cout << "µ±Ç°ÍÁµØÃ»ÓĞÈË£¬ÇëÖØĞÂÑ¡Ôñ" << endl;
+			cout << "ÂµÂ±Â«âˆÃ•Â¡ÂµÃ¿âˆšÂªâ€â€“Â»Ã€Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
 			if (coord_2(controller,m1, n1) == false) { return false; }
 			judge_coord_2(controller, m1, n1);
 		}
@@ -720,24 +724,24 @@ bool judge_coord_2(Controller& controller, int& m1, int& n1)//¶Ô1.ÖĞabcdeµÈµÈÅĞ¶
 		{
 			if (controller.centrepop == 0)
 			{
-				cout << "ÊĞÖĞĞÄÄ¿Ç°ÈË¿ÚÎª0£¬ÇëÖØĞÂÑ¡Ôñ" << endl;
+				cout << "Â â€“Ã·â€“â€“Æ’Æ’Ã¸Â«âˆÂ»Ã€Ã¸â„Å’â„¢0Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
 				if (coord_2(controller,m1, n1) == false) { return false; }
 				judge_coord_2(controller,m1, n1);
 			}
 		}
 	}
 	
-		cout << "ÒÆÈë³É¹¦£¡" << endl;  system("pause"); return true;
-	//·ûºÏÌõ¼ş£¬½áÊø·ÖÅä
+		cout << "â€œâˆ†Â»Ãâ‰¥â€¦Ï€Â¶Â£Â°" << endl;  system("pause"); return true;
+	//âˆ‘Ëšâˆ«Å“ÃƒÄ±ÂºË›Â£Â¨Î©Â·Â Â¯âˆ‘Ã·â‰ˆâ€°
 }
 void poptrsf_inner(Controller& controller, int m1, int n1, int m, int n)
 {
-	if (controller.map[m][n].type != 6)//ÏÈÅĞ¶¨Ä¿µÄµØ¿é  1.ÊÇ·ñÎªÊĞÖĞĞÄ
+	if (controller.map[m][n].type != 6)//Å“Â»â‰ˆâ€“âˆ‚Â®Æ’Ã¸ÂµÆ’ÂµÃ¿Ã¸Ãˆ  1.Â Â«âˆ‘Ã’Å’â„¢Â â€“Ã·â€“â€“Æ’
 	{
-		if (controller.map[m][n].type = 0)//£¤ÕâÀïÌîÈë£¬µ±Ã»½¨ÖşÊ±
+		if (controller.map[m][n].type = 0)//Â£Â§â€™â€šÂ¿Ã”ÃƒÃ“Â»ÃÂ£Â¨ÂµÂ±âˆšÂªÎ©Â®Ã·Ë›Â Â±
 		{
-			controller.map[m][n].ifpop = COLONIZED;//ÁîÆäÎªÎŞ½¨ÖşÓĞÈË
-			Landform s = controller.map[m][n].landform; // ÅĞ¶ÏµØĞÎ£¬²¢ĞŞ¸ÄÈË¿Ú¼Ó³É
+			controller.map[m][n].ifpop = COLONIZED;//Â¡Ã“âˆ†â€°Å’â„¢Å’ï¬Î©Â®Ã·Ë›â€â€“Â»Ã€
+			Landform s = controller.map[m][n].landform; // â‰ˆâ€“âˆ‚Å“ÂµÃ¿â€“Å’Â£Â¨â‰¤Â¢â€“ï¬âˆÆ’Â»Ã€Ã¸â„Âºâ€â‰¥â€¦
 			switch (s)
 			{
 			case PLAIN:controller.perfood += (2 / controller.allpop); //++controller.prod;
@@ -746,7 +750,7 @@ void poptrsf_inner(Controller& controller, int m1, int n1, int m, int n)
 			case HILLY:controller.perfood += (2 / controller.allpop);// controller.perprod += 2;
 			}
 		}
-		else { controller.map[m][n].ifpop = COLONIZED; }//£¤ÁîÆäÎªÓĞ½¨ÖşÓĞÈË£»
+		else { controller.map[m][n].ifpop = COLONIZED; }//Â£Â§Â¡Ã“âˆ†â€°Å’â„¢â€â€“Î©Â®Ã·Ë›â€â€“Â»Ã€Â£Âª
 	}
 
 
@@ -756,14 +760,14 @@ void poptrsf_inner(Controller& controller, int m1, int n1, int m, int n)
 		controller.perfood += (0.5 / controller.allpop);
 		/*controller.pertech += 0.7; controller.percul += 0.3;
 		controller.perprod += 0.5; ;*/
-	}//ÊÇÊĞÖĞĞÄÊ±,ÈË¿ÚÖµ¼Ó1,ÆäÓà¸÷ÖµËæÖ®Ôö¼Ó
+	}//Â Â«Â â€“Ã·â€“â€“Æ’Â Â±,Â»Ã€Ã¸â„Ã·ÂµÂºâ€1,âˆ†â€°â€â€¡âˆËœÃ·ÂµÃ€ÃŠÃ·Ã†â€˜Ë†Âºâ€
 
-	if (controller.map[m1][n1].type != 6)//ÔÙÅĞ¶ÏÇ¨³öµÄµØ¿é£¬²»ÊÇÊĞÖĞĞÄ
+	if (controller.map[m1][n1].type != 6)//â€˜Å¸â‰ˆâ€“âˆ‚Å“Â«Â®â‰¥Ë†ÂµÆ’ÂµÃ¿Ã¸ÃˆÂ£Â¨â‰¤ÂªÂ Â«Â â€“Ã·â€“â€“Æ’
 	{
-		if (controller.map[m1][n1].type = 0)//£¤ÕâÀïÌîÈë£¬µ±Ã»½¨ÖşÊ±
+		if (controller.map[m1][n1].type = 0)//Â£Â§â€™â€šÂ¿Ã”ÃƒÃ“Â»ÃÂ£Â¨ÂµÂ±âˆšÂªÎ©Â®Ã·Ë›Â Â±
 		{
-			controller.map[m1][n1].ifpop = OWNED;//£¤ÁîÆäÎªÎŞ½¨ÖşÎŞÈË
-			Landform s = controller.map[m1][n1].landform; // ÅĞ¶ÏµØĞÎ£¬²¢ĞŞ¸ÄÈË¿Ú¼Ó³É
+			controller.map[m1][n1].ifpop = OWNED;//Â£Â§Â¡Ã“âˆ†â€°Å’â„¢Å’ï¬Î©Â®Ã·Ë›Å’ï¬Â»Ã€
+			Landform s = controller.map[m1][n1].landform; // â‰ˆâ€“âˆ‚Å“ÂµÃ¿â€“Å’Â£Â¨â‰¤Â¢â€“ï¬âˆÆ’Â»Ã€Ã¸â„Âºâ€â‰¥â€¦
 			switch (s)
 			{
 			case PLAIN:controller.perfood -= (2 / controller.allpop); //--controller.perprod;
@@ -772,16 +776,16 @@ void poptrsf_inner(Controller& controller, int m1, int n1, int m, int n)
 			case HILLY:controller.perfood -= (2 / controller.allpop); //controller.perprod -= 2;
 			}
 		}
-		else { controller.map[m1][n1].ifpop = OWNED; }//£¤ÁîÆäÎªÓĞ½¨ÖşÎŞÈË£»
+		else { controller.map[m1][n1].ifpop = OWNED; }//Â£Â§Â¡Ã“âˆ†â€°Å’â„¢â€â€“Î©Â®Ã·Ë›Å’ï¬Â»Ã€Â£Âª
 	}
 
 
-	else//ÊÇÊĞÖĞĞÄ
+	else//Â Â«Â â€“Ã·â€“â€“Æ’
 	{
 		--controller.centrepop; controller.perfood -= (0.5 / controller.allpop);
 		/*controller.pertech -= 0.7; controller.percul -= 0.3;
 		controller.perprod -= 0.5; */
-	}//ÊÇÊĞÖĞĞÄÊ±,ÈË¿ÚÇ¨³öÊ¹µÃÈË¿ÚÖµ¼õÒ»,ÆäÓà¸÷ÖµËæÖ®¼õÉÙ
+	}//Â Â«Â â€“Ã·â€“â€“Æ’Â Â±,Â»Ã€Ã¸â„Â«Â®â‰¥Ë†Â Ï€ÂµâˆšÂ»Ã€Ã¸â„Ã·ÂµÂºÄ±â€œÂª,âˆ†â€°â€â€¡âˆËœÃ·ÂµÃ€ÃŠÃ·Ã†ÂºÄ±â€¦Å¸
 
 }
 
@@ -792,29 +796,29 @@ bool Controller::removepop_judge(int& m, int& n)
 	{
 		if (map[m][n].type != 6)
 		{
-			cout << "µ±Ç°ÍÁµØÃ»ÓĞÈË£¬ÇëÖØĞÂÑ¡Ôñ" << endl;
-			cout << "ÇëÒÀ´ÎÊäÈëÍÁµØºá×İ×ø±ê: " << endl;
-			cout << "·µ»Ø¿ØÖÆÃæ°åÊäÈë-1;Ñ¡¶¨ÊĞÖĞĞÄÊäÈë¿ì½İ¼ü-2 " << endl;
+			cout << "ÂµÂ±Â«âˆÃ•Â¡ÂµÃ¿âˆšÂªâ€â€“Â»Ã€Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
+			cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»ÃÃ•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±Ã: " << endl;
+			cout << "âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1;â€”Â°âˆ‚Â®Â â€“Ã·â€“â€“Æ’Â â€°Â»ÃÃ¸ÃÎ©â€ºÂºÂ¸-2 " << endl;
 			removepop_input(m, n);
 		}
 		else
 		{
 			if (centrepop == 0)
 			{
-				cout << "ÊĞÖĞĞÄÄ¿Ç°ÈË¿ÚÎª0£¬ÇëÖØĞÂÑ¡Ôñ" << endl;
-				cout << "ÇëÒÀ´ÎÊäÈëÍÁµØºá×İ×ø±ê: " << endl;
-				cout << "·µ»Ø¿ØÖÆÃæ°åÊäÈë-1;Ñ¡¶¨ÊĞÖĞĞÄÊäÈë¿ì½İ¼ü-2 " << endl;
+				cout << "Â â€“Ã·â€“â€“Æ’Æ’Ã¸Â«âˆÂ»Ã€Ã¸â„Å’â„¢0Â£Â¨Â«ÃÃ·Ã¿â€“Â¬â€”Â°â€˜Ã’" << endl;
+				cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»ÃÃ•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±Ã: " << endl;
+				cout << "âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1;â€”Â°âˆ‚Â®Â â€“Ã·â€“â€“Æ’Â â€°Â»ÃÃ¸ÃÎ©â€ºÂºÂ¸-2 " << endl;
 				removepop_input(m, n);
 			}
 			else {
 				--centrepop; mark_remove = 0; 
-				cout << "Íê³É£¡" << endl; system("pause"); return true;
+				cout << "Ã•Ãâ‰¥â€¦Â£Â°" << endl; system("pause"); return true;
 			}
 		}
 	}
 	else {
 		map[m][n].ifpop = OWNED; mark_remove = 0;
-		cout << "Íê³É£¡" << endl; system("pause"); return true;
+		cout << "Ã•Ãâ‰¥â€¦Â£Â°" << endl; system("pause"); return true;
 	}
 }
 bool Controller::removepop_input(int&m,int&n)
@@ -832,9 +836,9 @@ bool Controller::removepop_input(int&m,int&n)
 	}
 	while (m < 0 || m>19 || n < 0 || n>19)
 	{
-		cout << "×ø±ê·¶Î§Îª0-19£¬ÇëÖØĞÂÊäÈë " << endl;
-		cout << "ÇëÒÀ´ÎÊäÈëÍÁµØºá×İ×ø±ê: " << endl;
-		cout << "·µ»Ø¿ØÖÆÃæ°åÊäÈë-1;Ñ¡¶¨ÊĞÖĞĞÄÊäÈë¿ì½İ¼ü-2 " << endl;
+		cout << "â—ŠÂ¯Â±Ãâˆ‘âˆ‚Å’ÃŸÅ’â„¢0-19Â£Â¨Â«ÃÃ·Ã¿â€“Â¬Â â€°Â»Ã " << endl;
+		cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»ÃÃ•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±Ã: " << endl;
+		cout << "âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1;â€”Â°âˆ‚Â®Â â€“Ã·â€“â€“Æ’Â â€°Â»ÃÃ¸ÃÎ©â€ºÂºÂ¸-2 " << endl;
 		cin >> m;
 		if (m == -1) { return false; }
 		if (m == -2) {
@@ -852,10 +856,10 @@ bool Controller::removepop_input(int&m,int&n)
 void Controller::removepop()
 {   
 	int m=0, n=0;
-	cout << "ÓÉÓÚÊ³Îï²»×ã£¬×ÜÈË¿Ú¼õÉÙÁË¡£ÇëÑ¡ÔñÒ»¿éÍÁµØ¼õÉÙÈË¿Ú£º" << endl;
-	cout << "Ä¿Ç°ÊĞÖĞĞÄÈË¿ÚÎª " << centrepop << endl;
-	cout << "ÇëÒÀ´ÎÊäÈëÍÁµØºá×İ×ø±ê: " << endl;
-	cout << "·µ»Ø¿ØÖÆÃæ°åÊäÈë-1;Ñ¡¶¨ÊĞÖĞĞÄÊäÈë¿ì½İ¼ü-2 " << endl;
+	cout << "â€â€¦â€â„Â â‰¥Å’Ã”â‰¤Âªâ—Šâ€Â£Â¨â—Šâ€¹Â»Ã€Ã¸â„ÂºÄ±â€¦Å¸Â¡Ã€Â°Â£Â«Ãâ€”Â°â€˜Ã’â€œÂªÃ¸ÃˆÃ•Â¡ÂµÃ¿ÂºÄ±â€¦Å¸Â»Ã€Ã¸â„Â£âˆ«" << endl;
+	cout << "Æ’Ã¸Â«âˆÂ â€“Ã·â€“â€“Æ’Â»Ã€Ã¸â„Å’â„¢ " << centrepop << endl;
+	cout << "Â«Ãâ€œÂ¿Â¥Å’Â â€°Â»ÃÃ•Â¡ÂµÃ¿âˆ«Â·â—Šâ€ºâ—ŠÂ¯Â±Ã: " << endl;
+	cout << "âˆ‘ÂµÂªÃ¿Ã¸Ã¿Ã·âˆ†âˆšÃŠâˆÃ‚Â â€°Â»Ã-1;â€”Â°âˆ‚Â®Â â€“Ã·â€“â€“Æ’Â â€°Â»ÃÃ¸ÃÎ©â€ºÂºÂ¸-2 " << endl;
 	if (removepop_input(m,n) == false) {
 		return;
 	}
@@ -911,14 +915,14 @@ void Controller::showall()
 {
 	
 	int i = 0;
-	cout << "¿ÉÓÃÈË¿ÚÎª£º" << this->allpop << endl;
-	cout << "ÊĞÖĞĞÄÈË¿ÚÎª£º" << this->centrepop << endl;
-	cout << "¿ÉÓÃÊ³ÎïÎª£º" << this->food << endl;
-	cout << "µ±Ç°Éú²úÁ¦Îª£º" << this->prod << endl;
-	cout << "¿Æ¼¼ÖµÎª£º" << this->alltech << endl;
-	cout << "ÎÄ»¯ÖµÎª£º" << this->allcul << endl;
-	cout << "·ÖÊıÎª£º" << this->score << endl;
-	cout << "µ±Ç°ÕıÔÚĞŞ½¨µÄ½¨ÖşÓĞ£º" << endl;
+	cout << "Ã¸â€¦â€âˆšÂ»Ã€Ã¸â„Å’â„¢Â£âˆ«" << this->allpop << endl;
+	cout << "Â â€“Ã·â€“â€“Æ’Â»Ã€Ã¸â„Å’â„¢Â£âˆ«" << this->centrepop << endl;
+	cout << "Ã¸â€¦â€âˆšÂ â‰¥Å’Ã”Å’â„¢Â£âˆ«" << this->food << endl;
+	cout << "ÂµÂ±Â«âˆâ€¦Ë™â‰¤Ë™Â¡Â¶Å’â„¢Â£âˆ«" << this->prod << endl;
+	cout << "Ã¸âˆ†ÂºÂºÃ·ÂµÅ’â„¢Â£âˆ«" << this->alltech << endl;
+	cout << "Å’Æ’ÂªÃ˜Ã·ÂµÅ’â„¢Â£âˆ«" << this->allcul << endl;
+	cout << "âˆ‘Ã·Â ËÅ’â„¢Â£âˆ«" << this->score << endl;
+	cout << "ÂµÂ±Â«âˆâ€™Ëâ€˜â„â€“ï¬Î©Â®ÂµÆ’Î©Â®Ã·Ë›â€â€“Â£âˆ«" << endl;
 
 	while (zao[i].type != 0)
 	{
@@ -928,54 +932,54 @@ void Controller::showall()
 			switch (zao[i].type)
 			{
 			case 1:
-				cout << "Ñ§Ôº";
+				cout << "â€”ÃŸâ€˜âˆ«";
 				break;
 			case 2:
-				cout << "¾çÔº¹ã³¡";
+				cout << "Ã¦Ãâ€˜âˆ«Ï€â€â‰¥Â°";
 				break;
 
 			case 3:
-				cout << "Ææ¹Û";
+				cout << "âˆ†ÃŠÏ€â‚¬";
 				break;
 
 			case 4:
-				cout << "¹¤ÒµÇø";
+				cout << "Ï€Â§â€œÂµÂ«Â¯";
 				break;
 
 			default:
 				break;
 			}
-			cout << " »¹Ğè" << zao[i].oktime << "µãÉú²úÁ¦" << endl;
+			cout << " ÂªÏ€â€“Ã‹" << zao[i].oktime << "Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶" << endl;
 		}
 
 		i++;
 	}
 
-	cout << "µ±Ç°ÕıÔÚ¾Ù°ìµÄ»î¶¯ÓĞ£º" << endl;
+	cout << "ÂµÂ±Â«âˆâ€™Ëâ€˜â„Ã¦Å¸âˆÃÂµÆ’ÂªÃ“âˆ‚Ã˜â€â€“Â£âˆ«" << endl;
 
-	if (endmeeting > 0) cout << "Ñ§Êõ»áÒé" << ' ' << "»¹Ğè" << endmeeting << "µãÉú²úÁ¦" << endl;
-	if (endshow > 0) cout << "ÂşÕ¹" << ' ' << "»¹Ğè" << endshow << "µãÉú²úÁ¦" << endl;
-	if (endlogistics > 0) cout << "¹¤ÒµÎïÁ÷" << ' ' << "»¹Ğè" << endlogistics << "µãÉú²úÁ¦" << endl;
+	if (endmeeting > 0) cout << "â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ" << ' ' << "ÂªÏ€â€“Ã‹" << endmeeting << "Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶" << endl;
+	if (endshow > 0) cout << "Â¬Ë›â€™Ï€" << ' ' << "ÂªÏ€â€“Ã‹" << endshow << "Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶" << endl;
+	if (endlogistics > 0) cout << "Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ" << ' ' << "ÂªÏ€â€“Ã‹" << endlogistics << "Âµâ€â€¦Ë™â‰¤Ë™Â¡Â¶" << endl;
 
-	cout << "µ±Ç°Ìá¹©µÄ¼Ó³ÉÓĞ£º" << endl;
+	cout << "ÂµÂ±Â«âˆÃƒÂ·Ï€Â©ÂµÆ’Âºâ€â‰¥â€¦â€â€“Â£âˆ«" << endl;
 
-	int countmeeting = 1, countshow = 1, countlogistics = 1;	//¼ÇÂ¼»î¶¯±àºÅ
+	int countmeeting = 1, countshow = 1, countlogistics = 1;	//ÂºÂ«Â¬ÂºÂªÃ“âˆ‚Ã˜Â±â€¡âˆ«â‰ˆ
 
 	for (int j = 0; j < 100; j++) {
 		if (lastmeeting[j] > 0) {
-			cout << "Ñ§Êõ»áÒé" << countmeeting << " »¹ÓĞ " << lastmeeting[j] << " »ØºÏ" << endl;
+			cout << "â€”ÃŸÂ Ä±ÂªÂ·â€œÃˆ" << countmeeting << " ÂªÏ€â€â€“ " << lastmeeting[j] << " ÂªÃ¿âˆ«Å“" << endl;
 			countmeeting++;
 		}
 	}
 	for (int k = 0; k < 100; k++) {
 		if (lastshow[k] > 0) {
-			cout << "ÂşÕ¹" << countshow<<" »¹ÓĞ " << lastshow[k] << " »ØºÏ" << endl;
+			cout << "Â¬Ë›â€™Ï€" << countshow<<" ÂªÏ€â€â€“ " << lastshow[k] << " ÂªÃ¿âˆ«Å“" << endl;
 			countshow++;
 		}
 	}
 	for (int s = 0; s < 100; s++) {
 		if (lastlogistics[s] > 0) {
-			cout << "¹¤ÒµÎïÁ÷" << countlogistics << " »¹ÓĞ " << lastlogistics[s] << " »ØºÏ" << endl;
+			cout << "Ï€Â§â€œÂµÅ’Ã”Â¡Ëœ" << countlogistics << " ÂªÏ€â€â€“ " << lastlogistics[s] << " ÂªÃ¿âˆ«Å“" << endl;
 			countlogistics++;
 		}
 		}

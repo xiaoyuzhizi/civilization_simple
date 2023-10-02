@@ -1,33 +1,28 @@
 #include <iostream>
 using namespace std;
-#include"Display.h"//Î¨Ò»µÄ¶ÔÍâÍ·º¯Êı
-
-
-
-
-
+#include"Display.h"//å”¯ä¸€çš„å¯¹å¤–å¤´å‡½æ•°
 
 int main()
 {
 
 
-    Loading start;//¿ªÊ¼¼ÓÔØÀà
-    Grid grid;//µØÍ¼Àà
-    Controller controller;//¿ØÖÆÀà£¬¸÷ÖÖËã·¨°üº¬ÔÚÕâÀï
+    Loading start;//å¼€å§‹åŠ è½½ç±»
+    Grid grid;//åœ°å›¾ç±»
+    Controller controller;//æ§åˆ¶ç±»ï¼Œå„ç§ç®—æ³•åŒ…å«åœ¨è¿™é‡Œ
 
-    start.showstart();//ÔØÈë´æµµµÄº¯Êıµ÷ÓÃ
-    controller.map = start.selectmap(grid);//mapÀïÃæ´¢´æÁËËùÓĞÊı¾İ
+    start.showstart();//è½½å…¥å­˜æ¡£çš„å‡½æ•°è°ƒç”¨
+    controller.map = start.selectmap(grid);//mapé‡Œé¢å‚¨å­˜äº†æ‰€æœ‰æ•°æ®
     controller.length = grid.height;
     controller.width = grid.width;
 
-    int flag01 = 1;//Ã¿¾Ö½áÊøµÄ±êÖ¾
-    //int flag02 = 0;//ÊÇ·ñ½øĞĞcase4
+    int flag01 = 1;//æ¯å±€ç»“æŸçš„æ ‡å¿—
+    //int flag02 = 0;//æ˜¯å¦è¿›è¡Œcase4
     
 
 
     /*
-      Èç¹ûÏëÈÃÒ»¸öµ¥Ôª¸ñÏÔÊ¾Îª½¨Öş  Òª ÒÔ0.0ÎªÀı map[0][0].ifpop =OWNED»òCOLONIZED²ÅÔÚµØÍ¼ÉÏÏÔÊ¾ÎªÓĞ½¨Öş
-      ¶øÒªÏÔÊ¾Õâ¸ö¸ñ×ÓÀïÓĞÈËÒ»¶¨Òª°Ñmap[0][0].ifpop =COLONIZED£»²Å¿ÉÒÔ£¬Ö»¸ÄpopÊÇ²»¿ÉÒÔµÄ¡£
+      å¦‚æœæƒ³è®©ä¸€ä¸ªå•å…ƒæ ¼æ˜¾ç¤ºä¸ºå»ºç­‘  è¦ ä»¥0.0ä¸ºä¾‹ map[0][0].ifpop =OWNEDæˆ–COLONIZEDæ‰åœ¨åœ°å›¾ä¸Šæ˜¾ç¤ºä¸ºæœ‰å»ºç­‘
+      è€Œè¦æ˜¾ç¤ºè¿™ä¸ªæ ¼å­é‡Œæœ‰äººä¸€å®šè¦æŠŠmap[0][0].ifpop =COLONIZEDï¼›æ‰å¯ä»¥ï¼Œåªæ”¹popæ˜¯ä¸å¯ä»¥çš„ã€‚
     */
     start.showmap(controller.map, grid.height, grid.width);
     controller.selectcenter();
@@ -36,12 +31,12 @@ int main()
 
     while (1)
     {
-        controller.round++;//ÊÇ¾ÖÊı
+        controller.round++;//æ˜¯å±€æ•°
         controller.flagp = false;
         controller.flagd = false;
 
         flag01 = 1;
-       // flag02 = 1; //ÅĞ¶ÏÊÇ·ñ±¾»ØºÏĞÂ½¨ÁË³Ç³Ø»ò¾Ù°ìÁË»î¶¯
+       // flag02 = 1; //åˆ¤æ–­æ˜¯å¦æœ¬å›åˆæ–°å»ºäº†åŸæ± æˆ–ä¸¾åŠäº†æ´»åŠ¨
        
         if (controller.flagv == true)
         {
@@ -50,7 +45,7 @@ int main()
         while (flag01)
         {
             
-            // Ã¿»ØºÏÏÂÃæµÄÊıÖµÒªÇåÁã
+            // æ¯å›åˆä¸‹é¢çš„æ•°å€¼è¦æ¸…é›¶
             controller.prod = 0;
             controller.allcul = 0;
             controller.alltech = 0;
@@ -61,28 +56,29 @@ int main()
             controller.pertech = 0.7;
             
             controller.tongji();
-            controller.setpopBonus();//Í³¼ÆÍÁµØ¼Ó³É
-            controller.tongji2();   //¼ÆËãÓÉ»î¶¯Ôö¼ÓµÄ¿Æ¼¼¡¢ÎÄ»¯¡¢Éú²úÁ¦
-            controller.tongji3();//¼ÆËã×ÜµÄ¿Æ¼¼¡¢ÎÄ»¯¡¢Éú²úÁ¦
-            controller.victory();//ÅĞ¶ÏÊ¤ÀûÌõ¼ş
+            controller.setpopBonus();//ç»Ÿè®¡åœŸåœ°åŠ æˆ
+            controller.tongji2();   //è®¡ç®—ç”±æ´»åŠ¨å¢åŠ çš„ç§‘æŠ€ã€æ–‡åŒ–ã€ç”Ÿäº§åŠ›
+            controller.tongji3();//è®¡ç®—æ€»çš„ç§‘æŠ€ã€æ–‡åŒ–ã€ç”Ÿäº§åŠ›
+            controller.victory();//åˆ¤æ–­èƒœåˆ©æ¡ä»¶
 
             if (controller.mark_remove == 1) {
                 controller.removepop();
             }
-            start.showmap(controller.map, grid.height, grid.width);//Ã¿²½ÏÔÊ¾µØÍ¼µÄº¯Êıµ÷ÓÃ
+            start.showmap(controller.map, grid.height, grid.width);//æ¯æ­¥æ˜¾ç¤ºåœ°å›¾çš„å‡½æ•°è°ƒç”¨
             controller.showall();
             
-            char select = start.selectmove(controller.round);//Ñ¡Ôñ²Ù×÷
+            char select = start.selectmove(controller.round);//é€‰æ‹©æ“ä½œ
             switch (select)
             {
             case '0':
-                //½áÊø±¾»ØºÏ
-                cout << "±¾»ØºÏ½áÊø:" << endl;
+                //ç»“æŸæœ¬å›åˆ
+                cout << "æœ¬å›åˆç»“æŸ:" << endl;
                 flag01 = 0;
+                controller.expansion();
                 system("cls");
                 break;
             case '1':
-                //·ÖÅäÈË¿Ú  
+                //åˆ†é…äººå£  
                 select_poptrsf(controller);
                 system("cls");
                 break;
@@ -90,11 +86,11 @@ int main()
             {
                 if (controller.flagp == true)
                 {
-                    cout << "´Ë»ØºÏÒÑ¾­ĞÂ½¨½¨Öş»ò¾Ù°ì»î¶¯" << endl;
+                    cout << "æ­¤å›åˆå·²ç»æ–°å»ºå»ºç­‘æˆ–ä¸¾åŠæ´»åŠ¨" << endl;
                 }
                 else
                 {
-                    controller.build(); //ĞÂ½¨³Ç³Ø
+                    controller.build(); //æ–°å»ºåŸæ± 
                 }
                 
                 system("pause");
@@ -105,11 +101,11 @@ int main()
             {
                 if (controller.flagp == true)
                 {
-                    cout << "´Ë»ØºÏÒÑ¾­ĞÂ½¨³Ç³Ø»ò¾Ù°ì»î¶¯" << endl;
+                    cout << "æ­¤å›åˆå·²ç»æ–°å»ºåŸæ± æˆ–ä¸¾åŠæ´»åŠ¨" << endl;
                 }
                 else
                 {
-                    controller.activity();//¾Ù°ì»î¶¯  
+                    controller.activity();//ä¸¾åŠæ´»åŠ¨  
                 }
                 
                 system("pause");
@@ -117,14 +113,14 @@ int main()
                 break;
             }
             case '4':
-                //Ñ¡ÔñÕâ»ØºÏÒª½«Éú²úÁ¦Í¶ÈëÄÄÏîÔÚ½¨µÄ»î¶¯/½¨Öş¡£
+                //é€‰æ‹©è¿™å›åˆè¦å°†ç”Ÿäº§åŠ›æŠ•å…¥å“ªé¡¹åœ¨å»ºçš„æ´»åŠ¨/å»ºç­‘ã€‚
                 if (controller.flagd == true)
                 {
-                    cout << "´Ë»ØºÏÒÑ¾­Í¶Èë¹ıÉú²úÁ¦" << endl;
+                    cout << "æ­¤å›åˆå·²ç»æŠ•å…¥è¿‡ç”Ÿäº§åŠ›" << endl;
                 }
                 else
                 {
-                    controller.distribute();//·ÖÅäÉú²úÁ¦µ½½¨Öş»ò»î¶¯
+                    controller.distribute();//åˆ†é…ç”Ÿäº§åŠ›åˆ°å»ºç­‘æˆ–æ´»åŠ¨
                 }
 
                 system("pause");
@@ -132,14 +128,14 @@ int main()
                 break;
           
             case '5':
-                //ÍË³öÓÎÏ·
+                //é€€å‡ºæ¸¸æˆ
                 system("cls");
-                cout << "ÓÎÏ·½áÊø£¬¸ĞĞ»ÓÎÍæ£º" << endl;
+                cout << "æ¸¸æˆç»“æŸï¼Œæ„Ÿè°¢æ¸¸ç©ï¼š" << endl;
                 return 0;
                 break;
             default:
             {
-                cout << "Êı×Ö´úºÅ´íÎó£¬ÇëÖØĞÂÊäÈë£º" << endl;
+                cout << "æ•°å­—ä»£å·é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š" << endl;
                 system("pause");
                 system("cls");
                 break;
@@ -155,12 +151,12 @@ int main()
            // controller.morendistribute();
         }
         controller.updatepop();
-        controller.expansion();
+        
         
 
     }
 
-    for (int i = 0; i < grid.height; i++)//ÊÍ·ÅmapµÄÄÚ´æ
+    for (int i = 0; i < grid.height; i++)//é‡Šæ”¾mapçš„å†…å­˜
     {
         delete[] controller.map[i];
     }

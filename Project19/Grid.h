@@ -7,14 +7,14 @@
 #include<fstream>
 
 
-enum Civilized { WILD = 0, OWNED, COLONIZED };//���ö���ж��������������    �յأ�ӵ�еĵ�δ���ˣ�ֳ������˵�
+enum Civilized { WILD = 0, OWNED, COLONIZED };//’‚∏ˆ√∂æŸ≈–∂®Õ¯∏ÒµƒÕ¡µÿ¿‡–Õ    ø’µÿ£¨”µ”–µƒµ´Œ¥”–»À£¨÷≥√Òµƒ”–»Àµƒ
 enum Landform { OCEAN, SEA, PLAIN, HILLY, DESERT, MOUNTAIN, NOTYPE };
 
 class Cell
 {
 public:
-    Landform landform = PLAIN;//������ʽ  ƽ�ػ�ɳĮ��
-    Civilized ifpop = WILD;   // �Ƿ����� ***���wild��Ҫ��***Ҫ��Ȼ�ᱨ�� �͵�ͼ�������ŵ�
+    Landform landform = PLAIN;//Õ¡µÿ–Œ Ω  ∆ΩµÿªÚ…≥ƒÆµ»
+    Civilized ifpop = WILD;   //  «∑Ò”–»À ***’‚∏ˆwild≤ª“™∂Ø***“™≤ª»ªª·±®¥Ì ∫ÕµÿÕº¿‡ «¡¨◊≈µƒ
     int type = 0;
 
 
@@ -25,11 +25,11 @@ class Grid
 {
 public:
 
-    Cell** getmap(const char* filename);//һ�����������ͼ��ȡ
-    void savemap();//�����ͼ����д��������Ҫ�ö��ٻ������ݣ�������ô�洢
+    Cell** getmap(const char* filename);//“ª∏ˆ∫Ø ˝Ω‚æˆµÿÕº∂¡»°
+    void savemap();//±£¥ÊµÿÕº£¨‘⁄–¥£¨ø¥ƒ„√«“™”√∂‡…Ÿª˘¥° ˝æ›£¨æˆ∂®‘ı√¥¥Ê¥¢
 public:
     Cell** grid = NULL;
-    int height = 0, width = 0;//��ͼ�ĳ��Ϳ�
+    int height = 0, width = 0;//µÿÕºµƒ≥§∫ÕøÌ
 
 };
 
