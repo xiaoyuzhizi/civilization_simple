@@ -1,45 +1,36 @@
-#include"Grid.h"
-#include <iostream>
-using namespace std;
+#ifndef GRID_H
+#define GRID_H
 
 
 
-Cell** Grid::getmap(const char* filename)
+#pragma once
+#include<fstream>
+
+
+enum Civilized { WILD = 0, OWNED, COLONIZED };//’‚∏ˆ√∂æŸ≈–∂®Õ¯∏ÒµƒÕ¡µÿ¿‡–Õ    ø’µÿ£¨”µ”–µƒµ´Œ¥”–»À£¨÷≥√Òµƒ”–»Àµƒ
+enum Landform { OCEAN, SEA, PLAIN, HILLY, DESERT, MOUNTAIN, NOTYPE };
+
+class Cell
 {
-	ifstream ifs;
+public:
+    Landform landform = PLAIN;//Õ¡µÿ–Œ Ω  ∆ΩµÿªÚ…≥ƒÆµ»
+    Civilized ifpop = WILD;   //  «∑Ò”–»À ***’‚∏ˆwild≤ª“™∂Ø***“™≤ª»ªª·±®¥Ì ∫ÕµÿÕº¿‡ «¡¨◊≈µƒ
+    int type = 0;
 
-	ifs.open(filename, ios::in);
 
-	ifs >> this->height;
-	ifs >> this->width;
-	this->grid = new Cell * [this->height];
-	for (int i = 0; i < this->height; i++)
-	{
-		grid[i] = new Cell[this->width];
-	}
 
-	int a;
-	for (int i = 0; i < this->height; i++)
-	{
-		for (int j = 0; j < this->width; j++)
-		{
+};
 
-			ifs >> a;
-			grid[i][j].landform = Landform(a);
-		}
-	}
-	for (int i = 0; i < this->height; i++)
-	{
-		for (int j = 0; j < this->width; j++)
-		{
-			grid[i][j].type = 0;
-		}
-	}
-	ifs.close();
-	return this->grid;
-}
-
-void Grid::savemap()
+class Grid
 {
+public:
 
-}
+    Cell** getmap(const char* filename);//“ª∏ˆ∫Ø ˝Ω‚æˆµÿÕº∂¡»°
+    void savemap();//±£¥ÊµÿÕº£¨‘⁄–¥£¨ø¥ƒ„√«“™”√∂‡…Ÿª˘¥° ˝æ›£¨æˆ∂®‘ı√¥¥Ê¥¢
+public:
+    Cell** grid = NULL;
+    int height = 0, width = 0;//µÿÕºµƒ≥§∫ÕøÌ
+
+};
+
+#endif 
